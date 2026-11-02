@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Baukasten – Station</title>
+<link rel="stylesheet" href="../assets/pinnwand.css">
+<link rel="stylesheet" href="baukasten.css">
+</head>
+<body class="packpapier">
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<symbol id="i-kreis" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/></symbol>
+<symbol id="i-dreieck" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3Z"/></symbol>
+<symbol id="i-quadrat" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/></symbol>
+<symbol id="i-raute" viewBox="0 0 24 24"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></symbol>
+<symbol id="i-sechseck" viewBox="0 0 24 24"><path d="M7.5 3.5h9L21 12l-4.5 8.5h-9L3 12Z"/></symbol>
+<symbol id="i-haken" viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"/></symbol>
+<symbol id="i-kreuz" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-pfeil-hoch" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+<symbol id="i-pfeil-runter" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+<symbol id="i-neu" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v5h-5"/></symbol>
+<symbol id="i-extern" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+<symbol id="i-stift" viewBox="0 0 24 24"><path d="m4 20 4-1 11-11-3-3L5 16Z M14 7l3 3"/></symbol>
+<symbol id="i-lupe" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></symbol>
+<symbol id="i-zurueck" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+<symbol id="i-weiter" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-hinweis" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+<symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 20V9M7 14l5-5 5 5M5 4h14"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-muell" viewBox="0 0 24 24"><path d="M5 7h14M10 7V4h4v3M7 7l1 13h8l1-13"/></symbol>
+<symbol id="i-brille" viewBox="0 0 24 24"><circle cx="6.5" cy="14" r="3.5"/><circle cx="17.5" cy="14" r="3.5"/><path d="M10 14h4M3 14l1.6-7M21 14l-1.6-7"/></symbol>
+<symbol id="i-auge" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-haus" viewBox="0 0 24 24"><path d="M4 11.5 12 4l8 7.5M6 9.5V20h12V9.5"/></symbol>
+<symbol id="i-nadel" viewBox="0 0 24 24"><path d="M9 3h6l-1 6 3 3H7l3-3ZM12 12v9"/></symbol>
+</svg>
+
+<div class="bk-wand">
+  <header class="bk-kopf">
+    <div class="karte bk-titel"><h1 id="editor-titel">Station bearbeiten</h1><p>Station-Editor: Inhalt eingeben, prüfen, als <b>inhalt.json</b> speichern.</p></div>
+    <p class="karte gelb notiz nadel-blau">Der Entwurf wird automatisch in diesem Browser gespeichert. Trotzdem am Ende exportieren!</p>
+    <a class="zurueck" href="./"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-zurueck"></use></svg>Baukasten-Übersicht</a>
+  </header>
+  <nav aria-label="Station wählen"><ul class="stationswahl"><li><a href="station.html?nr=1" data-nr="1">Station 1: Konfliktinhalt</a></li><li><a href="station.html?nr=2" data-nr="2">Station 2: Konfliktverlauf</a></li><li><a href="station.html?nr=3" data-nr="3">Station 3: Konfliktstrukturen</a></li><li><a href="station.html?nr=4" data-nr="4">Station 4: Konfliktprognose</a></li><li><a href="station.html?nr=5" data-nr="5">Station 5: (Mediale) Wahrnehmung und Beurteilung</a></li></ul></nav>
+  <div class="karte werkzeug ohne-nadel">
+    <button type="button" class="knopf haupt" id="export"><svg class="ic" aria-hidden="true"><use href="#i-download"></use></svg>inhalt.json exportieren</button>
+    <button type="button" class="knopf" id="vorschau"><svg class="ic" aria-hidden="true"><use href="#i-auge"></use></svg>Vorschau im Exponat</button>
+    <label class="knopf datei-knopf"><svg class="ic" aria-hidden="true"><use href="#i-upload"></use></svg>inhalt.json laden<input type="file" id="datei" accept=".json,application/json"></label>
+    <button type="button" class="knopf leise" id="muster-laden"><svg class="ic" aria-hidden="true"><use href="#i-neu"></use></svg>Musterinhalt laden</button>
+    <p class="status" id="speicherstatus" aria-live="polite"></p>
+  </div>
+  <div class="aktion-meldung" id="aktion-meldung" role="status"></div>
+  <div class="editor">
+    <form id="formular" class="formular" novalidate onsubmit="return false"></form>
+    <aside class="seitenleiste" aria-label="Prüfliste">
+      <section class="karte pruef nadel-blau"><h2>Prüfliste</h2><div id="pruefliste"></div></section>
+      <section class="karte gelb pruef"><h2>Checkliste Perspektiven</h2>
+        <ul class="hand" style="list-style:none;padding:0;display:grid;gap:6px;color:var(--tinte)">
+          <li>Israelische und palästinensische Sicht gleich lang und gleich sachlich?</li>
+          <li>Jede Tatsache mit Quelle aus dem Pool?</li>
+          <li>Sätze kurz, Fachwörter erklärt (Klasse 9)?</li>
+          <li>Keine Bilder von Opfern, keine Flaggen.</li>
+        </ul></section>
+    </aside>
+  </div>
+
+</div>
+<script type="application/json" id="muster-1">{
+ "version": 1,
+ "station": 1,
+ "typ": "zuordnen",
+ "muster": true,
+ "titel": "Konfliktinhalt: Wer will was?",
+ "leitfrage": "Welche Akteure sind am Konflikt beteiligt – und was wollen sie erreichen?",
+ "anleitung": "Ziehe jede Akteurs-Karte (oval) auf das passende Interesse (rechteckig). Oder: Karte antippen, dann Interesse antippen.",
+ "paare": [
+  {
+   "akteur": "Israelische Regierung",
+   "interesse": "Die Hamas soll alle Waffen abgeben. Vorher will die Armee ihre Stellungen in Gaza nicht verlassen.",
+   "rueckmeldung": "Richtig. Ministerpräsident Netanjahu sagte im August 2026: Kein Rückzug, bevor die Hamas vollständig entwaffnet ist.",
+   "quelle": "tagesschau.de, 08/2026"
+  },
+  {
+   "akteur": "Hamas",
+   "interesse": "Schwere Waffen nur abgeben, wenn die israelische Armee aus Gaza abzieht. Israel als Staat wird nicht anerkannt.",
+   "rueckmeldung": "Richtig. Die Hamas knüpft die Entwaffnung an den Abzug Israels. In ihrem Grundsatzpapier von 2017 erkennt sie Israel nicht an.",
+   "quelle": "tagesschau.de, 08/2026; Grundsatzdokument der Hamas 2017"
+  },
+  {
+   "akteur": "Palästinensische Autonomiebehörde (PA)",
+   "interesse": "Ein eigener Staat Palästina neben Israel – mit dem Westjordanland, Gaza und Ost-Jerusalem.",
+   "rueckmeldung": "Richtig. Die PA in Ramallah setzt seit den Oslo-Abkommen auf Verhandlungen und eine Zwei-Staaten-Lösung.",
+   "quelle": "bpb: Osloer Abkommen"
+  },
+  {
+   "akteur": "Israelische Siedlerbewegung",
+   "interesse": "Mehr jüdische Siedlungen im Westjordanland. Viele lehnen einen palästinensischen Staat dort ab.",
+   "rueckmeldung": "Richtig. Für viele Siedler ist das Westjordanland biblisches Kernland („Judäa und Samaria“). Die UN werten die Siedlungen als völkerrechtswidrig.",
+   "quelle": "bpb: Geschichte des Nahostkonflikts"
+  },
+  {
+   "akteur": "Zivilbevölkerung in Gaza",
+   "interesse": "Sicherheit, Wasser, Essen und Medizin – und die zerstörten Häuser wieder aufbauen.",
+   "rueckmeldung": "Richtig. Laut UN leben rund 1,5 Millionen Menschen in Gaza in Zelten oder Notunterkünften.",
+   "quelle": "tagesschau.de, 10.10.2026"
+  },
+  {
+   "akteur": "Angehörige der Geiseln",
+   "interesse": "Ein Abkommen, das alle Verschleppten nach Hause bringt – auch wenn Israel dafür den Krieg beenden muss.",
+   "rueckmeldung": "Richtig. Die Familien der am 7. Oktober 2023 Verschleppten drängten die Regierung zu einem Abkommen mit der Hamas.",
+   "quelle": "tagesschau.de: Geiseln der Hamas – Übersicht"
+  },
+  {
+   "akteur": "USA (Regierung Trump)",
+   "interesse": "Den eigenen 20-Punkte-Friedensplan durchsetzen – und Israel als engen Verbündeten unterstützen.",
+   "rueckmeldung": "Richtig. Präsident Trump leitet den „Board of Peace“ (Friedensrat), der den Plan umsetzen soll.",
+   "quelle": "UN-Sicherheitsrat, Resolution 2803 (2025)"
+  },
+  {
+   "akteur": "Katar und Ägypten (Vermittler)",
+   "interesse": "Zwischen Israel und Hamas vermitteln. Ägypten will verhindern, dass Menschen aus Gaza auf die Sinai-Halbinsel vertrieben werden.",
+   "rueckmeldung": "Richtig. Katar und Ägypten vermittelten die Waffenruhe mit. Ägypten nennt eine Vertreibung auf den Sinai eine „rote Linie“.",
+   "quelle": "Ahram Online, 2026"
+  },
+  {
+   "akteur": "Iran",
+   "interesse": "Israels Macht in der Region schwächen – durch Geld und Waffen für Hamas, Hisbollah und Huthi.",
+   "rueckmeldung": "Richtig. Iran nennt dieses Bündnis „Achse des Widerstands“.",
+   "quelle": "bpb: Achse des Widerstands"
+  }
+ ],
+ "widerspruch": {
+  "israelisch": "Sicherheit kommt zuerst: Erst wenn die Hamas keine Waffen mehr hat, kann es Frieden und einen Abzug geben.",
+  "palaestinensisch": "Freiheit kommt zuerst: Erst wenn Besatzung und Blockade enden, kann es Sicherheit für alle geben.",
+  "einordnung": "Beide Seiten sagen, sie wollen Frieden. Sie streiten aber darüber, was zuerst kommen muss. Genau an dieser Reihenfolge hängt der Friedensplan seit Monaten fest."
+ },
+ "quellen": [
+  {
+   "titel": "Israel lehnt Trumps Plan zur Hamas-Entwaffnung ab",
+   "herausgeber": "tagesschau.de",
+   "url": "https://www.tagesschau.de/ausland/asien/netanjahu-hamas-entwaffnung-100.html",
+   "datum": "08/2026"
+  },
+  {
+   "titel": "Ein Jahr brüchige Gaza-Waffenruhe",
+   "herausgeber": "tagesschau.de",
+   "url": "https://www.tagesschau.de/ausland/asien/israel-gaza-waffenruhe-112.html",
+   "datum": "10.10.2026"
+  },
+  {
+   "titel": "Geiseln der Hamas – eine Übersicht",
+   "herausgeber": "tagesschau.de",
+   "url": "https://www.tagesschau.de/ausland/asien/geiseln-hamas-uebersicht-102.html",
+   "datum": ""
+  },
+  {
+   "titel": "Geschichte des Nahostkonflikts",
+   "herausgeber": "Bundeszentrale für politische Bildung",
+   "url": "https://www.bpb.de/themen/naher-mittlerer-osten/israel/45042/geschichte-des-nahostkonflikts/",
+   "datum": ""
+  },
+  {
+   "titel": "Osloer Abkommen als Meilensteine im Nahost-Friedensprozess",
+   "herausgeber": "Bundeszentrale für politische Bildung",
+   "url": "https://www.bpb.de/kurz-knapp/hintergrund-aktuell/275803/osloer-abkommen-als-meilensteine-im-nahost-friedensprozess/",
+   "datum": ""
+  },
+  {
+   "titel": "Achse des Widerstands: Iran und der Nahostkrieg",
+   "herausgeber": "Bundeszentrale für politische Bildung",
+   "url": "https://www.bpb.de/themen/naher-mittlerer-osten/iran/543559/achse-des-widerstands-iran-und-der-nahostkrieg/",
+   "datum": ""
+  },
+  {
+   "titel": "Security Council Authorizes International Stabilization Force in Gaza (Resolution 2803)",
+   "herausgeber": "Vereinte Nationen",
+   "url": "https://press.un.org/en/2025/sc16225.doc.htm",
+   "datum": "17.11.2025"
+  },
+  {
+   "titel": "Palestinians displacement to Sinai is ‘red line’ for Egypt",
+   "herausgeber": "Ahram Online",
+   "url": "https://english.ahram.org.eg/NewsContentP/1/575233/Egypt/Palestinians-displacement-to-Sinai-is-%E2%80%98red-line%E2%80%99-f.aspx",
+   "datum": "2026"
+  },
+  {
+   "titel": "Hamas in 2017: The document in full",
+   "herausgeber": "Middle East Eye",
+   "url": "https://www.middleeasteye.net/news/hamas-2017-document-full",
+   "datum": "2017"
+  }
+ ],
+ "eigeneQuelle": {
+  "titel": "",
+  "url": "",
+  "begruendung": ""
+ }
+}</script>
+<script type="application/json" id="muster-2">{
+ "version": 1,
+ "station": 2,
+ "typ": "zeitstrahl",
+ "muster": true,
+ "titel": "Konfliktverlauf: Was geschah wann?",
+ "leitfrage": "Wie wurde aus dem Streit um Land ein Dauerkonflikt?",
+ "anleitung": "Lege die Ereignis-Karten in die richtige Reihenfolge: das früheste oben, das jüngste unten. Ziehen oder antippen und dann einen Platz antippen. Danach „Prüfen“.",
+ "ereignisse": [
+  {
+   "datum": "1947-11-29",
+   "anzeige": "29. November 1947",
+   "titel": "UN-Teilungsplan",
+   "beschreibung": "Die UN-Vollversammlung beschließt, das britische Mandatsgebiet Palästina in einen jüdischen und einen arabischen Staat zu teilen.",
+   "israelisch": "Die jüdische Seite stimmt zu: endlich eine rechtliche Grundlage für einen eigenen Staat.",
+   "palaestinensisch": "Die arabische Seite lehnt ab: Sie ist in der Mehrheit, soll aber weniger als die Hälfte des Landes bekommen.",
+   "quelle": "bpb: UN-Teilungsplan für Palästina 1947"
+  },
+  {
+   "datum": "1948-05-14",
+   "anzeige": "14. Mai 1948",
+   "titel": "Gründung des Staates Israel – Krieg 1948/49",
+   "beschreibung": "Israel erklärt seine Unabhängigkeit. Am nächsten Tag greifen fünf arabische Armeen an.",
+   "israelisch": "Unabhängigkeit: Nach dem Holocaust hat das jüdische Volk einen eigenen, sicheren Staat.",
+   "palaestinensisch": "Nakba („Katastrophe“): Rund 700.000 Palästinenserinnen und Palästinenser fliehen oder werden vertrieben.",
+   "quelle": "bpb: Geschichte des Nahostkonflikts"
+  },
+  {
+   "datum": "1967-06-05",
+   "anzeige": "Juni 1967",
+   "titel": "Sechstagekrieg",
+   "beschreibung": "In sechs Tagen erobert Israel unter anderem das Westjordanland, Ost-Jerusalem und den Gazastreifen.",
+   "israelisch": "Ein Verteidigungskrieg gegen einen drohenden Angriff – Jerusalem ist wieder vereint.",
+   "palaestinensisch": "Naksa („Rückschlag“): Beginn der Besatzung; wieder fliehen viele Menschen.",
+   "quelle": "bpb: Geschichte des Nahostkonflikts"
+  },
+  {
+   "datum": "1993-09-13",
+   "anzeige": "13. September 1993",
+   "titel": "Oslo-Abkommen",
+   "beschreibung": "Israel und die PLO erkennen sich gegenseitig an. Die Palästinensische Autonomiebehörde entsteht.",
+   "israelisch": "Hoffnung auf Frieden – später Enttäuschung durch Selbstmordanschläge.",
+   "palaestinensisch": "Hoffnung auf einen eigenen Staat – später Enttäuschung, weil die Siedlungen weiter wachsen.",
+   "quelle": "bpb: Osloer Abkommen"
+  },
+  {
+   "datum": "2005-09-12",
+   "anzeige": "September 2005",
+   "titel": "Israel zieht aus dem Gazastreifen ab",
+   "beschreibung": "Israel räumt alle Siedlungen in Gaza und zieht seine Soldaten ab.",
+   "israelisch": "Ein Schritt zum Frieden – danach werden trotzdem Raketen auf Israel abgefeuert.",
+   "palaestinensisch": "Israel kontrolliert weiter Grenzen, Luftraum und Küste – für viele bleibt Gaza besetzt.",
+   "quelle": "bpb: Geschichte des Nahostkonflikts"
+  },
+  {
+   "datum": "2007-06-15",
+   "anzeige": "Juni 2007",
+   "titel": "Hamas übernimmt Gaza – Blockade",
+   "beschreibung": "Die Hamas vertreibt die Fatah aus Gaza. Israel und Ägypten riegeln den Gazastreifen weitgehend ab.",
+   "israelisch": "Die Blockade soll verhindern, dass die Hamas Waffen ins Land schmuggelt.",
+   "palaestinensisch": "Die Blockade trifft alle Menschen in Gaza – viele sprechen von einem „Freiluftgefängnis“.",
+   "quelle": "bpb: Geschichte des Nahostkonflikts"
+  },
+  {
+   "datum": "2023-10-07",
+   "anzeige": "7. Oktober 2023",
+   "titel": "Terrorangriff der Hamas – Beginn des Gaza-Kriegs",
+   "beschreibung": "Hamas-Kämpfer töten in Israel rund 1.200 Menschen und verschleppen 251 Geiseln. Israel beginnt einen Krieg in Gaza.",
+   "israelisch": "Der schlimmste Tag für Jüdinnen und Juden seit dem Holocaust. Ziel: die Hamas zerschlagen, die Geiseln befreien.",
+   "palaestinensisch": "Die Hamas nennt den Angriff „Al-Aqsa-Flut“ und spricht von Widerstand. Viele verweisen auf Besatzung und Blockade als Vorgeschichte.",
+   "quelle": "tagesschau.de; bpb"
+  },
+  {
+   "datum": "2025-10-10",
+   "anzeige": "10. Oktober 2025",
+   "titel": "Waffenruhe nach dem 20-Punkte-Plan",
+   "beschreibung": "Nach über zwei Jahren Krieg mit Zehntausenden Toten in Gaza tritt eine Waffenruhe in Kraft. Grundlage ist der Plan von US-Präsident Trump.",
+   "israelisch": "Alle lebenden Geiseln kommen frei. Die Hamas soll nun ihre Waffen abgeben.",
+   "palaestinensisch": "Die Bombardierungen sollen enden – doch Israel kontrolliert inzwischen rund 60 Prozent von Gaza, und Angriffe gehen weiter.",
+   "quelle": "tagesschau.de, 10.10.2026"
+  }
+ ],
+ "widerspruch": {
+  "israelisch": "1948 ist der Unabhängigkeitstag. 1967 wurde Jerusalem wieder vereint.",
+  "palaestinensisch": "1948 ist die Nakba, 1967 die Naksa – der Beginn der Besatzung.",
+  "einordnung": "Dieselben Daten, zwei Namen. Wer nur einen Namen benutzt, übernimmt oft schon eine Sicht. Fachlich fair ist es, beide Bezeichnungen zu nennen."
+ },
+ "quellen": [
+  {
+   "titel": "UN-Teilungsplan für Palästina 1947",
+   "herausgeber": "Bundeszentrale für politische Bildung",
+   "url": "https://www.bpb.de/kurz-knapp/taegliche-dosis-politik/543189/un-teilungsplan-fuer-palaestina-1947/",
+   "datum": ""
+  },
+  {
+   "titel": "Geschichte des Nahostkonflikts",
+   "herausgeber": "Bundeszentrale für politische Bildung",
+   "url": "https://www.bpb.de/themen/naher-mittlerer-osten/israel/45042/geschichte-des-nahostkonflikts/",
+   "datum": ""
+  },
+  {
+   "titel": "Osloer Abkommen als Meilensteine im Nahost-Friedensprozess",
+   "herausgeber": "Bundeszentrale für politische Bildung",
+   "url": "https://www.bpb.de/kurz-knapp/hintergrund-aktuell/275803/osloer-abkommen-als-meilensteine-im-nahost-friedensprozess/",
+   "datum": ""
+  },
+  {
+   "titel": "Zeitleiste: Der Nahostkonflikt (PDF)",
+   "herausgeber": "Bundeszentrale für politische Bildung",
+   "url": "https://www.bpb.de/system/files/dokument_pdf/Zeitleiste_Der_Nahostkonflikt_DE_Banner_0.pdf",
+   "datum": ""
+  },
+  {
+   "titel": "Ein Jahr brüchige Gaza-Waffenruhe",
+   "herausgeber": "tagesschau.de",
+   "url": "https://www.tagesschau.de/ausland/asien/israel-gaza-waffenruhe-112.html",
+   "datum": "10.10.2026"
+  },
+  {
+   "titel": "Geiseln der Hamas – eine Übersicht",
+   "herausgeber": "tagesschau.de",
+   "url": "https://www.tagesschau.de/ausland/asien/geiseln-hamas-uebersicht-102.html",
+   "datum": ""
+  }
+ ],
+ "eigeneQuelle": {
+  "titel": "",
+  "url": "",
+  "begruendung": ""
+ }
+}</script>
+<script type="application/json" id="muster-3">{
+ "version": 1,
+ "station": 3,
+ "typ": "theoriebrille",
+ "muster": true,
+ "titel": "Konfliktstrukturen: Welche Theorie-Brille?",
+ "leitfrage": "Welche tieferen Ursachen und Machtverhältnisse halten den Konflikt am Laufen?",
+ "anleitung": "Lies die Aussage. Durch welche Theorie-Brille schaut man hier am besten? Tippe eine Brille an.",
+ "brillen": [
+  {
+   "id": "realismus",
+   "name": "Realismus",
+   "form": "quadrat",
+   "kurz": "Staaten und Gruppen wollen Macht und Sicherheit. Jeder verlässt sich vor allem auf die eigene Stärke."
+  },
+  {
+   "id": "liberalismus",
+   "name": "Idealismus / Liberalismus",
+   "form": "kreis",
+   "kurz": "Zusammenarbeit, Regeln, Handel und internationale Organisationen wie die UN können Frieden sichern."
+  },
+  {
+   "id": "hexagon",
+   "name": "Senghaas-Hexagon",
+   "form": "sechseck",
+   "kurz": "Sechs Bausteine für inneren Frieden: Gewaltmonopol, Rechtsstaat, demokratische Beteiligung, soziale Gerechtigkeit, Konfliktkultur, Affektkontrolle."
+  },
+  {
+   "id": "galtung",
+   "name": "Galtung: Gewalt und Frieden",
+   "form": "dreieck",
+   "kurz": "Kein Krieg ist nur negativer Frieden. Positiver Frieden braucht Gerechtigkeit. Strukturelle Gewalt steckt in ungerechten Verhältnissen."
+  }
+ ],
+ "aussagen": [
+  {
+   "aussage": "Israels Regierung sagt: Unsere Armee zieht sich erst zurück, wenn die Hamas vollständig entwaffnet ist.",
+   "herkunft": "nach tagesschau.de, August 2026",
+   "brille": "realismus",
+   "erklaerung": "Sicherheit durch eigene militärische Stärke – man verlässt sich nicht auf Versprechen der Gegenseite. Das ist typisch realistisches Denken.",
+   "quelle": "tagesschau.de: Israel lehnt Trumps Plan zur Hamas-Entwaffnung ab"
+  },
+  {
+   "aussage": "Iran unterstützt Hamas, Hisbollah und die Huthi mit Geld und Waffen – als „Achse des Widerstands“ gegen Israel und die USA.",
+   "herkunft": "nach bpb",
+   "brille": "realismus",
+   "erklaerung": "Ein Staat baut Bündnisse auf, um seinen Einfluss zu vergrößern und Rivalen zu schwächen. Es geht um Machtgleichgewicht in der Region.",
+   "quelle": "bpb: Achse des Widerstands"
+  },
+  {
+   "aussage": "Der UN-Sicherheitsrat hat im November 2025 den Friedensplan unterstützt und eine internationale Stabilisierungstruppe für Gaza erlaubt.",
+   "herkunft": "UN-Resolution 2803, 17.11.2025",
+   "brille": "liberalismus",
+   "erklaerung": "Eine internationale Organisation setzt Regeln und organisiert gemeinsames Handeln. Das ist der Kern der liberalen Sicht.",
+   "quelle": "Vereinte Nationen: Resolution 2803"
+  },
+  {
+   "aussage": "2020 vereinbarten Israel, die Vereinigten Arabischen Emirate und Bahrain mit den Abraham-Abkommen Handel, Direktflüge und Tourismus.",
+   "herkunft": "Abraham-Abkommen, 2020",
+   "brille": "liberalismus",
+   "erklaerung": "Wer miteinander Handel treibt und reist, hat mehr zu verlieren, wenn es Krieg gibt. Liberale nennen das Interdependenz (gegenseitige Abhängigkeit).",
+   "quelle": "U.S. Department of State: The Abraham Accords"
+  },
+  {
+   "aussage": "Im Gazastreifen hatte seit 2007 nicht die Palästinensische Autonomiebehörde das Sagen, sondern die bewaffnete Hamas.",
+   "herkunft": "nach bpb",
+   "brille": "hexagon",
+   "erklaerung": "Es fehlt ein gemeinsames Gewaltmonopol: Zwei Machtzentren mit Waffen stehen sich gegenüber. Das ist der erste Baustein im Hexagon.",
+   "quelle": "bpb: Geschichte des Nahostkonflikts"
+  },
+  {
+   "aussage": "In den palästinensischen Gebieten gab es seit 2006 keine Parlamentswahl mehr.",
+   "herkunft": "nach Konrad-Adenauer-Stiftung",
+   "brille": "hexagon",
+   "erklaerung": "Ohne Wahlen fehlt demokratische Beteiligung. Menschen können Konflikte nicht friedlich über Wahlen austragen – ein Baustein des Hexagons.",
+   "quelle": "KAS: Die Wahlen zum Palästinensischen Legislativrat vom 25. Januar 2006"
+  },
+  {
+   "aussage": "Schon vor dem Krieg war im Gazastreifen fast jede zweite Person ohne Arbeit (2022: 45 Prozent).",
+   "herkunft": "UNCTAD, Oktober 2023",
+   "brille": "galtung",
+   "erklaerung": "Niemand schießt – und trotzdem werden Lebenschancen verhindert. Galtung nennt das strukturelle Gewalt.",
+   "quelle": "UNCTAD: Prior to current crisis, decades-long blockade hollowed Gaza’s economy"
+  },
+  {
+   "aussage": "Seit Oktober 2025 gilt offiziell eine Waffenruhe. Trotzdem leben rund 1,5 Millionen Menschen in Gaza in Zelten oder Notunterkünften, und für die meisten jüdischen Israelis bleibt Sicherheit das wichtigste Wahlthema.",
+   "herkunft": "nach tagesschau.de, 10.10.2026",
+   "brille": "galtung",
+   "erklaerung": "Die großen Kämpfe sind vorbei – das ist höchstens negativer Frieden. Positiver Frieden mit Sicherheit und Gerechtigkeit für alle ist noch weit weg.",
+   "quelle": "tagesschau.de: Ein Jahr brüchige Gaza-Waffenruhe"
+  }
+ ],
+ "widerspruch": {
+  "israelisch": "Der Kern ist ein Sicherheitsproblem: Bewaffnete Gruppen und Iran bedrohen Israel. Frieden braucht zuerst Abschreckung und Entwaffnung.",
+  "palaestinensisch": "Der Kern ist ein Gerechtigkeitsproblem: Besatzung, Blockade und fehlende Rechte erzeugen Gewalt. Frieden braucht zuerst Freiheit und Gleichberechtigung.",
+  "einordnung": "Die beiden Erzählungen setzen verschiedene Theorie-Brillen auf: eher Realismus auf der einen, eher Galtung auf der anderen Seite. Eine gute Analyse prüft beide."
+ },
+ "quellen": [
+  {
+   "titel": "Israel lehnt Trumps Plan zur Hamas-Entwaffnung ab",
+   "herausgeber": "tagesschau.de",
+   "url": "https://www.tagesschau.de/ausland/asien/netanjahu-hamas-entwaffnung-100.html",
+   "datum": "08/2026"
+  },
+  {
+   "titel": "Achse des Widerstands: Iran und der Nahostkrieg",
+   "herausgeber": "Bundeszentrale für politische Bildung",
+   "url": "https://www.bpb.de/themen/naher-mittlerer-osten/iran/543559/achse-des-widerstands-iran-und-der-nahostkrieg/",
+   "datum": ""
+  },
+  {
+   "titel": "Security Council Authorizes International Stabilization Force in Gaza (Resolution 2803)",
+   "herausgeber": "Vereinte Nationen",
+   "url": "https://press.un.org/en/2025/sc16225.doc.htm",
+   "datum": "17.11.2025"
+  },
+  {
+   "titel": "The Abraham Accords",
+   "herausgeber": "U.S. Department of State",
+   "url": "https://www.state.gov/the-abraham-accords",
+   "datum": ""
+  },
+  {
+   "titel": "Geschichte des Nahostkonflikts",
+   "herausgeber": "Bundeszentrale für politische Bildung",
+   "url": "https://www.bpb.de/themen/naher-mittlerer-osten/israel/45042/geschichte-des-nahostkonflikts/",
+   "datum": ""
+  },
+  {
+   "titel": "Die Wahlen zum Palästinensischen Legislativrat vom 25. Januar 2006 (PDF)",
+   "herausgeber": "Konrad-Adenauer-Stiftung",
+   "url": "https://www.kas.de/c/document_library/get_file?uuid=ec0408f5-48e1-34d8-563e-c68cf0737df1&groupId=252038",
+   "datum": "2006"
+  },
+  {
+   "titel": "Prior to current crisis, decades-long blockade hollowed Gaza’s economy",
+   "herausgeber": "UNCTAD",
+   "url": "https://unctad.org/press-material/prior-current-crisis-decades-long-blockade-hollowed-gazas-economy-leaving-80",
+   "datum": "25.10.2023"
+  },
+  {
+   "titel": "Ein Jahr brüchige Gaza-Waffenruhe",
+   "herausgeber": "tagesschau.de",
+   "url": "https://www.tagesschau.de/ausland/asien/israel-gaza-waffenruhe-112.html",
+   "datum": "10.10.2026"
+  },
+  {
+   "titel": "Das zivilisatorische Hexagon – Dieter Senghaas",
+   "herausgeber": "Friedensbildung Baden-Württemberg (LpB)",
+   "url": "https://www.friedensbildung-bw.de/friedenskonzepte-und-friedenstheorien/das-zivilisatorische-hexagon-dieter-senghaas",
+   "datum": ""
+  }
+ ],
+ "eigeneQuelle": {
+  "titel": "",
+  "url": "",
+  "begruendung": ""
+ }
+}</script>
+<script type="application/json" id="muster-4">{
+ "version": 1,
+ "station": 4,
+ "typ": "szenarien",
+ "muster": true,
+ "titel": "Konfliktprognose: Wie könnte es weitergehen?",
+ "leitfrage": "Welche Entwicklungen sind nach der Knesset-Wahl am 27. Oktober 2026 denkbar – und wovon hängen sie ab?",
+ "anleitung": "Wähle ein Szenario. Du siehst, was es für die Beteiligten bedeuten würde und was dafür passieren müsste. Szenarien sind Denkmodelle, keine Vorhersagen.",
+ "stand": "Oktober 2026",
+ "szenarien": [
+  {
+   "titel": "Phase II des Friedensplans gelingt",
+   "form": "kreis",
+   "kurz": "Die Hamas gibt ihre Waffen schrittweise ab. Eine palästinensische Übergangsverwaltung und eine internationale Truppe übernehmen. Israels Armee zieht sich Schritt für Schritt zurück.",
+   "folgen": [
+    {
+     "akteur": "Israel",
+     "text": "Weniger Bedrohung aus Gaza, Soldaten können nach Hause. Streit bleibt, ob wirklich alle Waffen weg sind."
+    },
+    {
+     "akteur": "Menschen in Gaza",
+     "text": "Grenzübergänge öffnen, Hilfe und Baumaterial kommen hinein. Der Wiederaufbau kann beginnen."
+    },
+    {
+     "akteur": "Hamas",
+     "text": "Verliert ihre militärische Macht. Ob sie politisch weiter Einfluss hat, ist offen."
+    },
+    {
+     "akteur": "Internationale Gemeinschaft",
+     "text": "Der „Board of Peace“ und Geberländer müssen Truppen und viel Geld für den Wiederaufbau stellen."
+    }
+   ],
+   "bedingungen": [
+    "Israel und Hamas einigen sich, was zuerst kommt: Entwaffnung oder Abzug.",
+    "Genug Staaten schicken Soldaten für die Stabilisierungstruppe.",
+    "Die abgegebenen Waffen werden international überwacht.",
+    "Die neue israelische Regierung stimmt dem Fahrplan zu."
+   ],
+   "quelle": "tagesschau.de: Kushner spricht mit Netanjahu über Friedensplan (2026); UN-Resolution 2803"
+  },
+  {
+   "titel": "Die Waffenruhe zerfällt",
+   "form": "dreieck",
+   "kurz": "Der Streit über die Entwaffnung eskaliert. Die Kämpfe in Gaza beginnen wieder in großem Umfang.",
+   "folgen": [
+    {
+     "akteur": "Israel",
+     "text": "Soldaten sind wieder im Krieg, Raketenalarm wird wahrscheinlicher. Der Druck aus dem Ausland wächst."
+    },
+    {
+     "akteur": "Menschen in Gaza",
+     "text": "Neue Flucht innerhalb des Gazastreifens, Hilfslieferungen stocken, Wiederaufbau wird unmöglich."
+    },
+    {
+     "akteur": "Hamas",
+     "text": "Kämpft weiter und verliert Kämpfer – kann aber neue Anhänger gewinnen."
+    },
+    {
+     "akteur": "Vermittler (USA, Katar, Ägypten, Türkei)",
+     "text": "Ihr Plan ist gescheitert. Sie verlieren Ansehen und Einfluss."
+    }
+   ],
+   "bedingungen": [
+    "Keine Seite hält sich an die Absprachen.",
+    "Ein schwerer Anschlag oder Angriff löst eine Kettenreaktion aus.",
+    "Der internationale Druck auf beide Seiten lässt nach."
+   ],
+   "quelle": "tagesschau.de: Ein Jahr brüchige Gaza-Waffenruhe (10.10.2026)"
+  },
+  {
+   "titel": "Weder Krieg noch Frieden",
+   "form": "quadrat",
+   "kurz": "Alles bleibt, wie es ist: Israel kontrolliert rund 60 Prozent des Gazastreifens, die Hamas den Rest. Die Waffenruhe bleibt brüchig.",
+   "folgen": [
+    {
+     "akteur": "Israel",
+     "text": "Die Armee bleibt dauerhaft in Gaza gebunden. Einzelne Angriffe gehen weiter."
+    },
+    {
+     "akteur": "Menschen in Gaza",
+     "text": "Viele leben weiter in Zelten und hängen von Hilfsorganisationen ab."
+    },
+    {
+     "akteur": "Hamas",
+     "text": "Behält Waffen und Kontrolle in ihrem Teil des Gazastreifens."
+    },
+    {
+     "akteur": "Palästinensische Übergangsverwaltung",
+     "text": "Sitzt in Ägypten fest und kann in Gaza nicht arbeiten."
+    }
+   ],
+   "bedingungen": [
+    "Es muss nichts passieren – genau das macht diesen Zustand so hartnäckig.",
+    "Keine Seite hat genug Druck oder Anreiz, nachzugeben."
+   ],
+   "quelle": "tagesschau.de: Ein Jahr brüchige Gaza-Waffenruhe (10.10.2026)"
+  },
+  {
+   "titel": "Zwei-Staaten-Verhandlungen nach der Wahl",
+   "form": "raute",
+   "kurz": "Eine neue israelische Regierung und eine erneuerte palästinensische Führung verhandeln wieder über einen Staat Palästina neben Israel.",
+   "folgen": [
+    {
+     "akteur": "Israel",
+     "text": "Heftige Debatte im Land. Gefordert werden starke Sicherheitsgarantien."
+    },
+    {
+     "akteur": "Palästinenserinnen und Palästinenser",
+     "text": "Hoffnung auf einen eigenen Staat – aber Streit, wer sie vertreten darf (PA oder Hamas)."
+    },
+    {
+     "akteur": "Israelische Siedlerbewegung",
+     "text": "Starker Widerstand gegen jede Räumung von Siedlungen im Westjordanland."
+    },
+    {
+     "akteur": "Arabische Staaten",
+     "text": "Saudi-Arabien und andere könnten ihre Beziehungen zu Israel normalisieren."
+    }
+   ],
+   "bedingungen": [
+    "Die neue israelische Regierung ist zu Verhandlungen bereit. Netanjahu lehnt einen palästinensischen Staat bisher ab.",
+    "Die palästinensische Seite hat eine gewählte, anerkannte Führung.",
+    "Es gibt Lösungen für Siedlungen, Jerusalem und die Flüchtlinge.",
+    "USA und arabische Staaten geben Sicherheitsgarantien."
+   ],
+   "quelle": "tagesschau.de: Kushner spricht mit Netanjahu über Friedensplan (2026)"
+  }
+ ],
+ "widerspruch": {
+  "israelisch": "Erst muss die Hamas entwaffnet sein, dann kann die Armee abziehen. Ein palästinensischer Staat wäre heute ein Sicherheitsrisiko.",
+  "palaestinensisch": "Erst muss die Armee abziehen und die Besatzung enden, dann können Waffen abgegeben werden. Ohne eigenen Staat gibt es keinen dauerhaften Frieden.",
+  "einordnung": "Beide Seiten verlangen, dass die andere zuerst handelt. Der Friedensplan versucht, beides gleichzeitig und schrittweise zu regeln – genau darüber wird gestritten."
+ },
+ "quellen": [
+  {
+   "titel": "Kushner spricht mit Netanjahu über Friedensplan für Gazastreifen",
+   "herausgeber": "tagesschau.de",
+   "url": "https://www.tagesschau.de/ausland/asien/israel-gazastreifen-usa-kushner-ben-gvir-100.html",
+   "datum": "2026"
+  },
+  {
+   "titel": "Israel lehnt Trumps Plan zur Hamas-Entwaffnung ab",
+   "herausgeber": "tagesschau.de",
+   "url": "https://www.tagesschau.de/ausland/asien/netanjahu-hamas-entwaffnung-100.html",
+   "datum": "08/2026"
+  },
+  {
+   "titel": "Ein Jahr brüchige Gaza-Waffenruhe",
+   "herausgeber": "tagesschau.de",
+   "url": "https://www.tagesschau.de/ausland/asien/israel-gaza-waffenruhe-112.html",
+   "datum": "10.10.2026"
+  },
+  {
+   "titel": "Security Council Authorizes International Stabilization Force in Gaza (Resolution 2803)",
+   "herausgeber": "Vereinte Nationen",
+   "url": "https://press.un.org/en/2025/sc16225.doc.htm",
+   "datum": "17.11.2025"
+  },
+  {
+   "titel": "Elections to the 26th Knesset, October 27th, 2026",
+   "herausgeber": "Gov.il (Staat Israel)",
+   "url": "https://www.gov.il/en/pages/knesset-elections-2026",
+   "datum": "2026"
+  }
+ ],
+ "eigeneQuelle": {
+  "titel": "",
+  "url": "",
+  "begruendung": ""
+ }
+}</script>
+<script type="application/json" id="muster-5">{
+ "version": 1,
+ "station": 5,
+ "typ": "echtoderfake",
+ "muster": true,
+ "titel": "Wahrnehmung: Echt oder Fake?",
+ "leitfrage": "Wie prägen Bilder und Posts in sozialen Medien unser Bild vom Konflikt?",
+ "anleitung": "Lies die Beschreibung des Posts. Ist er echt, gefälscht oder aus dem Zusammenhang gerissen? Tippe deine Antwort an. Alle Fälle wurden von Faktencheck-Redaktionen geprüft (Links geprüft am 16.10.2026).",
+ "faelle": [
+  {
+   "plattform": "X und Facebook",
+   "beschreibung": "Ein Bild zeigt einen Vater, der in Gaza fünf Kinder auf einmal durch Trümmer trägt. Es wurde hunderttausendfach geteilt – sogar von einer Botschaft.",
+   "behauptung": "„So sieht der Alltag in Gaza aus.“",
+   "urteil": "gefaelscht",
+   "aufloesung": "Das Bild ist kein Foto, sondern mit Künstlicher Intelligenz erzeugt. Wichtig: Es gibt viele echte Belege für Leid und Zerstörung in Gaza – dieses Bild gehört nicht dazu.",
+   "pruefer": "CORRECTIV.Faktencheck",
+   "url": "https://correctiv.org/faktencheck/2023/11/08/dieses-bild-von-einem-mann-mit-fuenf-kindern-in-gaza-wurde-mit-kuenstlicher-intelligenz-generiert/",
+   "datum": "08.11.2023"
+  },
+  {
+   "plattform": "X (früher Twitter)",
+   "beschreibung": "Ein Video zeigt, wie Raketen auf einen Hubschrauber abgefeuert werden. Der Hubschrauber explodiert.",
+   "behauptung": "„Hamas-Kämpfer schießen in Gaza einen israelischen Kampfhubschrauber ab.“",
+   "urteil": "kontext",
+   "aufloesung": "Die Szene stammt aus dem Computerspiel „Arma 3“ – nicht aus Gaza.",
+   "pruefer": "ARD-faktenfinder (tagesschau.de)",
+   "url": "https://www.tagesschau.de/faktenfinder/israel-hamas-fakes-100.html",
+   "datum": "10.10.2023"
+  },
+  {
+   "plattform": "X und TikTok",
+   "beschreibung": "Ein Video zeigt zwei kleine Mädchen, die weinend mit bewaffneten Uniformierten sprechen.",
+   "behauptung": "„Israelische Soldaten entführen im Oktober 2023 zwei palästinensische Mädchen.“",
+   "urteil": "kontext",
+   "aufloesung": "Das Video ist echt, aber von Mai 2021 aus Jerusalem: Die Mädchen bitten Polizisten, ihren Bruder nicht festzunehmen. Mit dem Gaza-Krieg hat es nichts zu tun.",
+   "pruefer": "DW Fact check",
+   "url": "https://dw.com/en/fact-check-fake-videos-circulating-over-hamas-attack-on-israel/a-67058015",
+   "datum": "10.10.2023"
+  },
+  {
+   "plattform": "TikTok und Instagram",
+   "beschreibung": "Kurze Videos zeigen frierende Kinder und alte Menschen im dichten Schneetreiben in Gaza (Winter 2025/26).",
+   "behauptung": "„Schneesturm in Gaza – die Menschen erfrieren in Zelten.“",
+   "urteil": "gefaelscht",
+   "aufloesung": "Die Clips sind mit KI erzeugt: Wind und Fahnen wehen in verschiedene Richtungen, und in Gaza war es kaum kälter als 10 °C. Echte Unwetter mit Sturm und Regen gab es dort aber.",
+   "pruefer": "APA-Faktencheck / GADMO",
+   "url": "https://gadmo.eu/apa-faktencheck-ki-schnee-videos-aus-gaza-sollen-emotionen-schren/",
+   "datum": "09.01.2026"
+  },
+  {
+   "plattform": "X (früher Twitter)",
+   "beschreibung": "Ein Foto zeigt ein Kind in einem weißen Sack, das dabei auf ein Handy schaut.",
+   "behauptung": "„Palästinenser spielen Tote – alles nur Theater (#Pallywood).“",
+   "urteil": "kontext",
+   "aufloesung": "Das Foto zeigt ein Kind im Halloween-Kostüm bei einem Wettbewerb in Thailand. Es wurde schon 2022 gepostet – fast ein Jahr vor dem 7. Oktober 2023.",
+   "pruefer": "AAP FactCheck (Australien)",
+   "url": "https://www.aap.com.au/factcheck/gaza-crisis-actor-is-actually-thai-child-in-halloween-costume/",
+   "datum": "08.11.2023"
+  },
+  {
+   "plattform": "Instagram",
+   "beschreibung": "Ein offizieller Account des israelischen Außenministeriums stellt zwei Fotos von Menschen mit leeren Töpfen in Gaza nebeneinander.",
+   "behauptung": "„Das Foto ist gestellt – gemachte Gefühle.“",
+   "urteil": "echt",
+   "aufloesung": "Die Fotos sind echt und zeigen nicht dieselbe Szene: andere Menschen, andere Töpfe, andere Fotografen. Die Behauptung „inszeniert“ ist falsch.",
+   "pruefer": "DW Fact check",
+   "url": "https://www.dw.com/en/fact-check-gaza-famine-photos-not-staged/a-73626929",
+   "datum": "15.08.2025"
+  },
+  {
+   "plattform": "X (früher Twitter)",
+   "beschreibung": "Ein Video zeigt uniformierte Hamas-Kämpfer auf Pick-ups. Es wird kurz nach Beginn der Waffenruhe im Oktober 2025 geteilt.",
+   "behauptung": "„Jetzt, wo Waffenstillstand ist, hat die Hamas plötzlich ihre Uniformen gefunden.“",
+   "urteil": "kontext",
+   "aufloesung": "Das Video ist alt: Es stammt vom Januar 2025 und zeigt eine Szene vor einer Geiselübergabe bei der damaligen Waffenruhe.",
+   "pruefer": "ARD-faktenfinder (tagesschau.de)",
+   "url": "https://www.tagesschau.de/faktenfinder/israel-gaza-fakes-100.html",
+   "datum": "13.10.2025"
+  },
+  {
+   "plattform": "X und Telegram",
+   "beschreibung": "Ein Screenshot sieht aus wie eine Seite des ägyptischen Amazon-Shops.",
+   "behauptung": "„Dort werden israelische Geiseln der Hamas zum Kauf angeboten.“",
+   "urteil": "gefaelscht",
+   "aufloesung": "Der Screenshot ist eine Fotomontage. Amazon hat geprüft: Solche Angebote gab es nicht.",
+   "pruefer": "BR24 #Faktenfuchs",
+   "url": "https://www.br.de/nachrichten/netzwelt/faktenfuchs-bilder-und-videos-aus-israel-im-check,TsTIhO6",
+   "datum": "12.10.2023"
+  },
+  {
+   "plattform": "Telegram und X",
+   "beschreibung": "Ein Video sieht aus wie ein Bericht der BBC und beruft sich auf das Recherche-Netzwerk Bellingcat.",
+   "behauptung": "„Die Ukraine hat westliche Waffen an die Hamas geliefert.“",
+   "urteil": "gefaelscht",
+   "aufloesung": "Diesen Bericht gibt es nicht – BBC und Bellingcat nennen das Video eine Fälschung. Verbreitet haben es prorussische Kanäle: Ein dritter Akteur nutzt den Nahost-Krieg für eigene Ziele.",
+   "pruefer": "CORRECTIV.Faktencheck",
+   "url": "https://correctiv.org/faktencheck/2023/10/23/ukraine-hamas-gefaelschter-bbc-bericht-bellingcat-bestaetigte-keinen-waffenschmuggel/",
+   "datum": "23.10.2023"
+  },
+  {
+   "plattform": "X (früher Twitter)",
+   "beschreibung": "Ein graues, unscharfes Drohnenvideo zeigt ein riesiges Gebiet mit zerstörten Häusern in Gaza. Über 9 Millionen Aufrufe – viele schreiben: „Das ist doch KI!“",
+   "behauptung": "„Das Video ist ein KI-Fake.“",
+   "urteil": "echt",
+   "aufloesung": "Das Video ist echt: Es zeigt das Flüchtlingslager Jabaliya, stammt von einem Fotografen vor Ort und wird durch Satellitenbilder bestätigt. Nicht alles, was verdächtig aussieht, ist gefälscht.",
+   "pruefer": "DW Fact check",
+   "url": "https://dw.com/en/fact-check-viral-drone-video-of-gaza-destruction-is-real/a-72968972",
+   "datum": "19.06.2025"
+  }
+ ],
+ "tipps": [
+  "Wer hat das zuerst gepostet? Original suchen.",
+  "Rückwärtssuche: Gibt es das Bild oder Video schon länger?",
+  "Passen Ort, Wetter, Sprache und Schilder zur Behauptung?",
+  "Haben seriöse Faktenchecks schon darüber berichtet?"
+ ],
+ "widerspruch": {
+  "israelisch": "Viele Israelis halten internationale Medien für parteiisch gegen Israel – zum Beispiel, weil sie Opferzahlen der von der Hamas kontrollierten Behörden übernehmen.",
+  "palaestinensisch": "Viele Palästinenserinnen und Palästinenser halten westliche Medien für parteiisch für Israel – zum Beispiel, weil Leid in Gaza weniger Aufmerksamkeit bekommt.",
+  "einordnung": "Beide Seiten fühlen sich unfair dargestellt. Dazu kommt: Israel lässt ausländische Journalistinnen und Journalisten seit Oktober 2023 nicht unabhängig nach Gaza. Viele Bilder lassen sich deshalb schwer prüfen."
+ },
+ "quellen": [
+  {
+   "titel": "KI-Bild: Vater mit fünf Kindern vor Trümmern",
+   "herausgeber": "CORRECTIV.Faktencheck",
+   "url": "https://correctiv.org/faktencheck/2023/11/08/dieses-bild-von-einem-mann-mit-fuenf-kindern-in-gaza-wurde-mit-kuenstlicher-intelligenz-generiert/",
+   "datum": "08.11.2023"
+  },
+  {
+   "titel": "Computerspiel statt Hamas-Angriff",
+   "herausgeber": "ARD-faktenfinder (tagesschau.de)",
+   "url": "https://www.tagesschau.de/faktenfinder/israel-hamas-fakes-100.html",
+   "datum": "10.10.2023"
+  },
+  {
+   "titel": "Angebliche Entführung zweier Mädchen durch israelische Soldaten",
+   "herausgeber": "DW Fact check",
+   "url": "https://dw.com/en/fact-check-fake-videos-circulating-over-hamas-attack-on-israel/a-67058015",
+   "datum": "10.10.2023"
+  },
+  {
+   "titel": "KI-Schneevideos aus Gaza",
+   "herausgeber": "APA-Faktencheck / GADMO",
+   "url": "https://gadmo.eu/apa-faktencheck-ki-schnee-videos-aus-gaza-sollen-emotionen-schren/",
+   "datum": "09.01.2026"
+  },
+  {
+   "titel": "„Krisendarsteller“ mit Handy im Leichensack",
+   "herausgeber": "AAP FactCheck (Australien)",
+   "url": "https://www.aap.com.au/factcheck/gaza-crisis-actor-is-actually-thai-child-in-halloween-costume/",
+   "datum": "08.11.2023"
+  },
+  {
+   "titel": "Hunger-Fotos angeblich „inszeniert“",
+   "herausgeber": "DW Fact check",
+   "url": "https://www.dw.com/en/fact-check-gaza-famine-photos-not-staged/a-73626929",
+   "datum": "15.08.2025"
+  },
+  {
+   "titel": "Altes Hamas-Video zur Waffenruhe 2025",
+   "herausgeber": "ARD-faktenfinder (tagesschau.de)",
+   "url": "https://www.tagesschau.de/faktenfinder/israel-gaza-fakes-100.html",
+   "datum": "13.10.2025"
+  },
+  {
+   "titel": "Gefälschter Amazon-Screenshot: Geiseln „zu verkaufen“",
+   "herausgeber": "BR24 #Faktenfuchs",
+   "url": "https://www.br.de/nachrichten/netzwelt/faktenfuchs-bilder-und-videos-aus-israel-im-check,TsTIhO6",
+   "datum": "12.10.2023"
+  },
+  {
+   "titel": "Gefälschter BBC-Bericht: Waffen aus der Ukraine für die Hamas",
+   "herausgeber": "CORRECTIV.Faktencheck",
+   "url": "https://correctiv.org/faktencheck/2023/10/23/ukraine-hamas-gefaelschter-bbc-bericht-bellingcat-bestaetigte-keinen-waffenschmuggel/",
+   "datum": "23.10.2023"
+  },
+  {
+   "titel": "Gegenbeispiel: Drohnenvideo als „KI-Fake“ verdächtigt – ist aber echt",
+   "herausgeber": "DW Fact check",
+   "url": "https://dw.com/en/fact-check-viral-drone-video-of-gaza-destruction-is-real/a-72968972",
+   "datum": "19.06.2025"
+  },
+  {
+   "titel": "ARD-faktenfinder",
+   "herausgeber": "tagesschau.de / ARD",
+   "url": "https://www.tagesschau.de/faktenfinder",
+   "datum": ""
+  },
+  {
+   "titel": "CORRECTIV.Faktencheck",
+   "herausgeber": "CORRECTIV (gemeinnütziges Recherchezentrum)",
+   "url": "https://correctiv.org/faktencheck/",
+   "datum": ""
+  },
+  {
+   "titel": "#Faktenfuchs Faktenchecks",
+   "herausgeber": "BR24 (Bayerischer Rundfunk)",
+   "url": "https://www.br.de/nachrichten/faktenfuchs-faktencheck,QzSIzl3",
+   "datum": ""
+  },
+  {
+   "titel": "DW Faktencheck",
+   "herausgeber": "Deutsche Welle",
+   "url": "https://www.dw.com/de/faktencheck/t-56578552",
+   "datum": ""
+  },
+  {
+   "titel": "Wahrnehmungen der Nahostberichterstattung deutscher Medien (Befunde einer repräsentativen Befragung)",
+   "herausgeber": "LMU München, Prof. C. Reinemann (CIVIS Mediendialog, 26.11.2025)",
+   "url": "https://www.civismedia.eu/wp-content/uploads/2025/11/Erste-Befunde-Medienvertrauen-Nahost-II-Reinemann-LMU_.pdf",
+   "datum": ""
+  },
+  {
+   "titel": "How to Make Atrocities That Are Happening an Hour’s Drive from Home Disappear: Eight Techniques of Israeli Mainstream Media",
+   "herausgeber": "The Seventh Eye / HaAyin HaShevi'it (israelische Medienbeobachtung)",
+   "url": "https://the7eye.org.il/560629",
+   "datum": ""
+  },
+  {
+   "titel": "7amleh 2026 Mid-Year Report",
+   "herausgeber": "7amleh – Arab Center for Social Media Advancement (Haifa)",
+   "url": "https://7amleh.org/mid26/en/",
+   "datum": ""
+  },
+  {
+   "titel": "Gerichtliche Anhörung über Zugang internationaler Medien zum Gazastreifen",
+   "herausgeber": "Deutschlandfunk",
+   "url": "https://www.deutschlandfunk.de/gerichtliche-anhoerung-ueber-zugang-internationaler-medien-zum-gazastreifen-geplant-102.html",
+   "datum": ""
+  }
+ ],
+ "eigeneQuelle": {
+  "titel": "",
+  "url": "",
+  "begruendung": ""
+ }
+}</script>
+<script src="editor.js"></script>
+</body>
+</html>

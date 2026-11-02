@@ -1,0 +1,253 @@
+/* Stations-Exponate – Welt F2 „Pinnwand“. Baut auf ../assets/pinnwand.css auf (Tokens, Schriften, .karte, Nadeln). */
+html{scrollbar-color:#7d5f38 var(--packpapier);-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;font-size:clamp(17px,.5vw + 13px,23px);line-height:1.45;color:var(--ink)}
+::-webkit-scrollbar{width:12px;height:12px}::-webkit-scrollbar-track{background:var(--packpapier)}
+::-webkit-scrollbar-thumb{background:#7d5f38;border-radius:8px;border:3px solid var(--packpapier)}
+a{color:var(--tinte);text-decoration-thickness:1.5px;text-underline-offset:.18em}
+a:hover{text-decoration-thickness:2.5px}
+h1,h2,h3{font-weight:700;line-height:1.15;text-wrap:balance;margin:0}
+p{margin:0}
+[hidden]{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.ic{width:1.15em;height:1.15em;flex:none;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.2em}
+.ic.form{stroke-width:2.6}
+.skip{position:absolute;left:12px;top:-60px;background:var(--k-weiss);padding:10px 14px;z-index:50;font-weight:700}
+.skip:focus{top:12px}
+
+.wand{max-width:1480px;margin:0 auto;padding:clamp(34px,3vw,58px) clamp(14px,3vw,48px) 40px}
+
+/* Kopf */
+.kopf{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(16px,2vw,32px);align-items:start;margin-bottom:clamp(30px,3vw,46px)}
+.nr{width:clamp(76px,7vw,124px);height:clamp(76px,7vw,124px);display:grid;place-items:center;padding:12px 0 0;font-size:clamp(40px,3.6vw,68px);line-height:1;transform:rotate(-3deg)}
+.titelkarte{padding:clamp(26px,2vw,36px) clamp(18px,2vw,32px) clamp(16px,1.6vw,24px);transform:rotate(-.4deg)}
+.titelkarte h1{font-size:clamp(25px,1.7vw + 14px,48px)}
+.titelkarte .bereich{margin-top:.55em;font-size:.95em}
+.titelkarte .leitfrage{font-weight:400;font-size:1.05em;margin-top:.45em;max-width:60ch}
+.muster{font:400 clamp(17px,.5vw + 13px,24px)/1.2 var(--font-hand);color:var(--tinte);padding:28px 16px 12px;max-width:15em;transform:rotate(2.5deg);text-align:center}
+.muster[hidden]{display:none}
+.vorschau-hinweis{background:var(--k-rose)}
+
+.anleitung{display:flex;gap:14px;align-items:flex-start;padding:28px 22px 16px;margin-bottom:clamp(30px,3vw,44px);max-width:70rem;transform:rotate(.25deg)}
+.anleitung p{font:400 1.12em/1.35 var(--font-hand);color:var(--tinte)}
+.anleitung .ic{width:1.6em;height:1.6em;color:var(--tinte);margin-top:.1em}
+
+/* Knöpfe */
+.knopf{font:700 1em/1.15 var(--font-druck);color:var(--ink);background:var(--k-weiss);border:0;border-radius:10px;box-shadow:var(--schatten);padding:.7em 1.15em;min-height:48px;display:inline-flex;align-items:center;gap:.5em;cursor:pointer;transition:transform .18s cubic-bezier(.16,1,.3,1),box-shadow .18s}
+.knopf:hover{transform:translateY(-2px);box-shadow:0 6px 12px rgba(0,0,0,.26)}
+.knopf:active{transform:translateY(1px);box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.knopf.haupt{background:var(--k-gelb)}
+.knopf[disabled]{opacity:.55;cursor:not-allowed;transform:none;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.knopfreihe{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hand{font-family:var(--font-hand)}
+
+/* Zieh-/Tipp-Mechanik */
+.ziehbar{touch-action:none;user-select:none;-webkit-user-select:none;cursor:grab}
+.gewaehlt{outline:4px solid var(--tinte);outline-offset:3px;transform:translateY(-4px) rotate(0deg)!important;box-shadow:0 10px 18px rgba(0,0,0,.3)}
+.wird-gezogen{opacity:.35}
+.geist{position:fixed;left:0;top:0;z-index:1000;pointer-events:none;margin:0!important;transform:rotate(3deg);box-shadow:0 16px 28px rgba(0,0,0,.35)!important;opacity:.96}
+.ablage{border:2.5px dashed rgba(29,29,27,.5);border-radius:14px;min-height:56px;display:flex;align-items:center;justify-content:center;gap:.4em;padding:8px 12px;font:400 1em/1.2 var(--font-hand);color:var(--tinte);transition:background-color .15s,border-color .15s}
+.ziel-aktiv .ablage,.ablage.ziel-aktiv{background:rgba(255,227,110,.6);border:2.5px solid var(--tinte)}
+.hat-auswahl .ziel:not(.fest){cursor:pointer}
+.hat-auswahl .ziel:not(.fest) .ablage{border-color:var(--tinte);background:rgba(255,255,255,.4)}
+
+/* Rückmeldung */
+.status-rueck{display:flex;gap:.55em;align-items:flex-start;font-weight:700}
+.status-rueck .ic{width:1.4em;height:1.4em;margin-top:.02em}
+.ist-richtig{color:var(--ink)}
+.falsch-markiert{outline:3px dashed var(--ink);outline-offset:4px}
+@keyframes wackeln{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.wackelt{animation:wackeln .32s ease-in-out 1}
+@keyframes anstecken{from{transform:translateY(-16px) scale(1.04);box-shadow:0 18px 26px rgba(0,0,0,.3)}to{transform:none;box-shadow:var(--schatten)}}
+.angesteckt{animation:anstecken .45s cubic-bezier(.16,1,.3,1) 1}
+.meldung{pointer-events:none;position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:60;max-width:min(92vw,40em);padding:26px 20px 14px;display:none}
+.meldung.zeigt{display:block;animation:anstecken .4s cubic-bezier(.16,1,.3,1) 1}
+.meldung p{display:flex;gap:.55em;align-items:flex-start}
+.meldung .ic{width:1.35em;height:1.35em;margin-top:.05em}
+.fortschritt{font:400 1.1em/1 var(--font-hand);color:var(--tinte);padding:24px 16px 10px;white-space:nowrap}
+
+/* Spielfläche allgemein */
+.spiel{margin-bottom:clamp(40px,4vw,64px)}
+.spalte-kopf{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;margin:0 0 30px}
+.spalte-kopf h2{font-size:1.25em}
+.fertig{padding:30px 24px 22px;margin-top:40px;display:grid;gap:14px;max-width:46rem}
+.fertig h2{font-size:1.35em}
+
+/* ---------- Station 1: Zuordnen ---------- */
+.s1{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.3fr);gap:clamp(22px,3vw,48px);align-items:start}
+.akteure{display:flex;flex-direction:column;gap:22px;position:sticky;top:12px}
+.akteur{font:700 1em/1.2 var(--font-druck);border:0;padding:20px 24px;text-align:center;color:var(--ink);min-height:74px;transition:transform .18s cubic-bezier(.16,1,.3,1)}
+.akteur:nth-child(odd){transform:rotate(-1.2deg)}.akteur:nth-child(even){transform:rotate(1deg)}
+.akteure .leer{font:400 1.05em/1.3 var(--font-hand);color:var(--ink);background:rgba(251,250,246,.55);padding:12px 14px;border-radius:10px}
+.interessen{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:44px 26px;padding-top:6px}
+.interesse{display:flex;flex-direction:column;gap:14px;font-weight:400;padding:30px 18px 16px}
+.interesse>p{font-weight:700}
+.interesse:nth-child(3n+1){transform:rotate(-.6deg)}.interesse:nth-child(3n+2){transform:rotate(.5deg)}
+.interesse .ablage{margin-top:auto}
+.angeheftet{display:grid;gap:10px;margin-top:auto}
+.mini-oval{justify-self:center;display:inline-flex;align-items:center;gap:.45em;background:var(--k-gelb);border-radius:50%/45%;padding:12px 22px;box-shadow:var(--schatten);font-weight:700}
+.angeheftet .rueck{font-size:.9em}
+.angeheftet .q{font-size:.78em;font-style:italic}
+
+/* ---------- Station 2: Zeitstrahl ---------- */
+.s2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);gap:clamp(22px,3vw,48px);align-items:start}
+.stapel{display:flex;flex-direction:column;gap:20px;position:sticky;top:12px;min-height:120px;border-radius:16px;padding:6px}
+.stapel.ziel-aktiv{background:rgba(251,250,246,.35);outline:2.5px dashed var(--ink)}
+.ereignis{font:400 .95em/1.3 var(--font-druck);text-align:left;border:0;color:var(--ink);padding:16px 18px;display:grid;gap:4px;width:100%}
+.ereignis b{font-size:1.05em}
+.stapel .ereignis:nth-child(odd){transform:rotate(-.8deg)}.stapel .ereignis:nth-child(even){transform:rotate(.7deg)}
+.strahl{list-style:none;margin:0;padding:0 0 0 0;position:relative;display:grid;gap:18px}
+.strahl::before{content:'';position:absolute;left:27px;top:8px;bottom:8px;width:4px;border-radius:2px;background:var(--ink);opacity:.75}
+.richtung{display:flex;align-items:center;gap:.4em;font:700 1em/1 var(--font-druck);margin:0 0 16px 6px}
+.richtung.unten{margin:18px 0 0 6px}
+.slot{display:grid;grid-template-columns:58px minmax(0,1fr);gap:14px;align-items:center;position:relative}
+.slot .punkt{width:58px;height:58px;border-radius:50%;background:var(--k-weiss);box-shadow:var(--schatten);display:grid;place-items:center;font-weight:700;font-size:1.05em;z-index:1}
+.slot .platz{min-height:72px;border-radius:14px}
+.slot .platz:focus-visible{outline:3px solid var(--tinte);outline-offset:3px}
+.slot .ereignis{transform:none}
+.ereignis.fest{cursor:default;padding-top:30px}
+.ereignis .datum{font:700 1.1em/1 var(--font-hand);color:var(--tinte);display:flex;gap:.4em;align-items:center}
+.ereignis.falsch-markiert{outline:3px dashed var(--ink)}
+.sichten{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:10px;padding-top:12px;border-top:2px dashed rgba(29,29,27,.35)}
+.sichten h4{margin:0 0 4px;font-size:.92em}
+.sichten p{font-size:.92em}
+.s2-knoepfe{margin-top:34px}
+.s2-meldung{margin-top:22px;padding:26px 20px 14px;max-width:46rem}
+
+/* ---------- Station 3: Theorie-Brille ---------- */
+.s3{display:grid;gap:clamp(30px,3vw,46px);max-width:1180px;margin:0 auto}
+.aussage{padding:clamp(34px,3vw,46px) clamp(22px,3vw,44px) 22px;transform:rotate(-.4deg)}
+.aussage blockquote{margin:0;font-size:clamp(22px,1.2vw + 14px,38px);line-height:1.3;font-weight:700;max-width:46ch}
+.aussage .herkunft{font:400 1em/1.2 var(--font-hand);color:var(--tinte);margin-top:.7em}
+.aussage .zaehler{font:400 1em/1 var(--font-hand);color:var(--tinte);margin-bottom:.6em}
+.brillen{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 24px}
+.brille{font:400 .95em/1.3 var(--font-druck);color:var(--ink);text-align:left;border:0;cursor:pointer;display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 12px;align-items:center;align-content:start;padding:28px 18px 18px;transition:transform .18s cubic-bezier(.16,1,.3,1)}
+.brille .ic.form{width:2em;height:2em}
+.brille span{grid-column:1/-1}
+.brille b{font-size:1.12em}
+.brille:hover:not([disabled]){transform:translateY(-3px)}
+.brille[disabled]{cursor:not-allowed}
+.brille.falsch-markiert{opacity:.75}
+.brille.ist-loesung{outline:4px solid var(--ink);outline-offset:3px}
+.rueckkarte{padding:30px 22px 18px;display:grid;gap:12px}
+.rueckkarte .q{font-size:.85em;font-style:italic}
+
+/* ---------- Station 4: Szenarien ---------- */
+.s4-hinweis{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start;margin-bottom:34px}
+.prognose-notiz{font:700 1.2em/1.2 var(--font-hand);color:var(--tinte);padding:28px 20px 14px;transform:rotate(-1.5deg)}
+.szenario-wahl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 22px;margin-bottom:clamp(36px,3vw,52px)}
+.szenario{font:700 1em/1.2 var(--font-druck);color:var(--ink);border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;padding:32px 16px 20px;min-height:170px;justify-content:center;transition:transform .18s cubic-bezier(.16,1,.3,1)}
+.szenario .ic.form{width:2.4em;height:2.4em}
+.szenario:hover{transform:translateY(-3px)}
+.szenario[aria-pressed=true]{outline:4px solid var(--ink);outline-offset:4px}
+.szenario-ergebnis{display:grid;gap:clamp(32px,3vw,48px)}
+.szenario-kopf{padding:30px 24px 20px;display:grid;gap:10px}
+.szenario-kopf h2{font-size:1.4em;display:flex;gap:.5em;align-items:center}
+.szenario-kopf .ic.form{width:1.4em;height:1.4em}
+.folgen{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:44px 22px}
+.folge{padding:30px 18px 16px;font-weight:400;display:grid;gap:6px;align-content:start}
+.folge h3{font-size:1em}
+.folge:nth-child(odd){transform:rotate(-.6deg)}.folge:nth-child(even){transform:rotate(.6deg)}
+.bedingungen{padding:34px clamp(22px,3vw,44px) 26px}
+.bedingungen h3{font-size:1.2em;margin-bottom:12px}
+.bedingungen ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.bedingungen li{display:flex;gap:.6em;align-items:flex-start}
+.bedingungen li .ic{margin-top:.15em}
+.klebepunkt{padding:30px 22px 20px;display:grid;gap:14px}
+.skala{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;position:relative}
+.skala button{font:400 .85em/1.15 var(--font-druck);color:var(--ink);background:transparent;border:2px dashed rgba(29,29,27,.45);border-radius:12px;min-height:64px;padding:8px 6px;cursor:pointer;display:grid;place-items:center;gap:4px}
+.skala button[aria-pressed=true]{border:2px solid var(--ink);background:rgba(255,227,110,.55)}
+.dot{width:26px;height:26px;border-radius:50%;background:var(--signal);box-shadow:0 2px 3px rgba(0,0,0,.35)}
+.skala .q{font-size:.8em}
+.leer-hinweis{font:400 1.15em/1.3 var(--font-hand);color:var(--tinte);padding:28px 22px 16px;max-width:36rem}
+
+/* ---------- Station 5: Echt oder Fake ---------- */
+.s5{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:clamp(24px,3vw,48px);align-items:start}
+.fall{padding:clamp(34px,3vw,46px) clamp(20px,3vw,40px) 24px;display:grid;gap:14px;transform:rotate(-.3deg)}
+.fall .plattform{font:400 1.05em/1 var(--font-hand);color:var(--tinte)}
+.fall .beschr{font-size:1.1em}
+.fall .behauptung{font-size:clamp(21px,1vw + 14px,34px);font-weight:700;line-height:1.25}
+.urteile{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:34px}
+.urteil{font:700 1em/1.2 var(--font-druck);color:var(--ink);border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding:24px 12px 18px;min-height:120px;justify-content:center;transition:transform .18s cubic-bezier(.16,1,.3,1)}
+.urteil .ic.form{width:2em;height:2em}
+.urteil:hover:not([disabled]){transform:translateY(-3px)}
+.urteil[disabled]{cursor:not-allowed}
+.urteil.falsch-markiert{opacity:.7}
+.urteil.ist-loesung{outline:4px solid var(--ink);outline-offset:3px}
+.aufloesung{padding:30px 22px 20px;display:grid;gap:12px;margin-top:40px}
+.aufloesung .pruefer{font-size:.9em}
+.tipps{padding:30px 20px 18px}
+.tipps h2{font-size:1.1em;margin-bottom:10px}
+.tipps ol{margin:0;padding-left:1.3em;display:grid;gap:8px;font-size:.95em}
+
+/* ---------- Unten: Widerspruch + Quellen ---------- */
+.unten{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(30px,3vw,48px);align-items:start;margin-top:clamp(20px,3vw,40px)}
+.widerspruch{padding:clamp(34px,3vw,46px) clamp(22px,3vw,40px) 26px;border-radius:30px 46px 38px 52px/40px 32px 50px 42px}
+.widerspruch h2,.quellen h2{font-size:1.3em;margin-bottom:18px}
+.zwei{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2vw,32px)}
+.zwei>div{display:grid;gap:6px;align-content:start}
+.zwei h3{font-size:1em;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+.einordnung{margin-top:20px;padding-top:14px;border-top:2px dashed rgba(29,29,27,.45)}
+.einordnung b{display:block;margin-bottom:2px}
+.quellen{padding:clamp(34px,3vw,46px) clamp(20px,2.4vw,32px) 22px}
+.quellen ol{margin:0;padding-left:1.25em;display:grid;gap:10px;font-size:.88em}
+.quellen li span{display:block;font-size:.92em}
+.eigene{margin-top:18px;padding-top:14px;border-top:2px dashed rgba(29,29,27,.4);font-size:.88em;display:grid;gap:4px}
+.fuss{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;margin-top:clamp(40px,4vw,64px);align-items:center}
+.fuss a{font-weight:700;color:var(--ink);background:var(--k-weiss);padding:.6em 1em;border-radius:10px;box-shadow:var(--schatten);text-decoration:none;display:inline-flex;gap:.45em;align-items:center;min-height:48px}
+.fuss a:hover{text-decoration:underline}
+.fehler-karte{padding:30px 22px 18px;max-width:40rem}
+
+/* Lesetext auf Karten normal, nur Überschriften fett */
+.widerspruch,.quellen,.rueckkarte,.aufloesung,.bedingungen,.szenario-kopf,.fertig,.tipps,.s2-meldung,.folge{font-weight:400}
+.widerspruch b,.einordnung b{font-weight:700}
+@media (min-width:901px){
+  .akteure{gap:16px}
+  .akteur{min-height:58px;padding:13px 20px}
+}
+
+/* ---------- responsiv ---------- */
+@media (max-width:1100px){
+  .szenario-wahl{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .kopf{grid-template-columns:auto minmax(0,1fr)}
+  .kopf .muster{grid-column:1/-1;justify-self:end;margin-top:4px}
+  .s1,.s2,.s5{grid-template-columns:minmax(0,1fr)}
+  .akteure,.stapel{position:sticky;top:0;z-index:20;flex-direction:row;overflow-x:auto;gap:16px;padding:14px 12px 16px;margin:0 -12px;background-color:var(--packpapier);box-shadow:0 6px 10px -6px rgba(0,0,0,.35);border-radius:0}
+  .akteur{flex:none;max-width:15em}
+  .stapel .ereignis{flex:none;width:min(78vw,300px)}
+  .stapel:empty::after{content:'';}
+  .unten{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  .zwei,.sichten{grid-template-columns:1fr}
+  .brillen{grid-template-columns:minmax(0,1fr)}
+  .urteile{grid-template-columns:minmax(0,1fr);gap:16px}
+  .urteil{flex-direction:row;min-height:64px;justify-content:flex-start;text-align:left;padding:16px}
+  .szenario-wahl{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px 14px}
+  .szenario{min-height:130px;padding:28px 10px 14px;font-size:.92em}
+  .skala{grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}
+  .skala button{font-size:.7em;padding:6px 2px}
+  .slot{grid-template-columns:44px minmax(0,1fr);gap:10px}
+  .slot .punkt{width:44px;height:44px}
+  .strahl::before{left:20px}
+}
+@media (min-width:1600px){
+  .brillen{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+
+/* Kartenstapel bleibt beim Scrollen sichtbar: die ganze Spalte klebt (nicht nur die Liste) */
+@media (min-width:901px){
+  .s1>section:first-child,.s2>section:first-child{position:sticky;top:10px;max-height:calc(100vh - 20px);overflow-y:auto;overscroll-behavior:contain;padding:30px 14px 18px 10px;margin:-30px -14px 0 -10px;scrollbar-width:thin}
+  .akteure,.stapel{position:static}
+}
+@media (max-width:900px){
+  .s1>section:first-child,.s2>section:first-child{position:sticky;top:0;z-index:20;background-color:var(--packpapier);margin:0 -14px;padding:10px 14px 0;box-shadow:0 6px 10px -6px rgba(0,0,0,.35)}
+  .s1>section:first-child .spalte-kopf,.s2>section:first-child .spalte-kopf{margin:0 0 4px}
+  .s1>section:first-child .spalte-kopf h2,.s2>section:first-child .spalte-kopf h2{font-size:1em}
+  .s1>section:first-child .fortschritt,.s2>section:first-child .fortschritt{padding:6px 10px;box-shadow:none;background:transparent}
+  .akteure,.stapel{position:static;box-shadow:none;margin:0 -14px;padding:24px 14px 14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}

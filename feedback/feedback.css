@@ -1,0 +1,10 @@
+/* Exit-Feedback – ergänzt arena.css */
+.exit { max-width: 980px; }
+.exit-kopf h1 { font-size: clamp(26px, 4.4vw, 42px); line-height: 1.1; }
+.exit-kopf { touch-action: none; user-select: none; -webkit-user-select: none; }
+.exit-form { display: flex; flex-direction: column; gap: 30px; }
+.exit-meldung { min-height: 1.3em; text-align: center; font-size: 21px; color: #1d1d1b; }
+.exit-danke { padding-top: 46px; padding-bottom: 36px; }
+.exit-fuss { text-align: center; font-size: 18px; margin: 0; }
+.exit-fuss a { color: var(--ink); font-weight: 700; text-underline-offset: 4px; }
+.exit-fuss a:hover { text-decoration-thickness: 2px; }

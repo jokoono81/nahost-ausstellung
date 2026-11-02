@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz-Arena – Konfliktanalyse Nahost</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../assets/pinnwand.css">
+<link rel="stylesheet" href="arena.css">
+</head>
+<body class="host packpapier">
+<div id="buehne">
+
+  <!-- START / Warten auf Teams -->
+  <section id="s-start" class="screen" aria-labelledby="titel-start">
+    <div class="links">
+      <div class="karte logo schief-l" id="logo">
+        <h1 id="titel-start">Quiz-Arena</h1>
+        <p class="untertitel">Konfliktanalyse Nahost – testet euer Wissen im Team</p>
+        <p class="hand">Eine Ausstellung des Sowi-LK Q2</p>
+      </div>
+      <div class="schritte">
+        <div class="karte schritt gelb schief-r"><b>1</b>Nehmt ein Tablet und scannt den QR-Code.</div>
+        <div class="karte schritt blau nadel-blau"><b>2</b>Euer Team-Name kommt automatisch. Ihr könnt neu würfeln.</div>
+        <div class="karte schritt apricot wolke schief-l"><b>3</b>Wenn alle da sind: Start drücken. 10 Fragen aus den 5 Stationen.</div>
+      </div>
+      <div class="karte bestenliste nadel-blau" id="bestenliste-start"></div>
+    </div>
+    <div class="rechts">
+      <div class="karte qr-karte schief-r" id="qr-karte">
+        <div class="qr-box" id="qr-start"></div>
+        <p class="raum">Raum <b id="raum-start">····</b></p>
+        <p class="mit">Mit dem Tablet scannen und mitspielen</p>
+        <p class="status" id="status-start" role="status">Verbindung wird aufgebaut …</p>
+      </div>
+      <div class="karte netz-weg schief-r" id="netz-weg" hidden>
+        <h2>Tablets können sich gerade nicht verbinden.</h2>
+        <p>Das Schul-WLAN blockiert vermutlich die Verbindung. Ihr könnt trotzdem spielen: direkt hier am Smartboard.</p>
+        <button type="button" class="knopf leise" id="knopf-neu-verbinden">Nochmal verbinden</button>
+      </div>
+      <div class="karte ohne-tablet nadel-blau" id="ohne-tablet">
+        <h2>Ohne Tablets am Smartboard spielen</h2>
+        <button type="button" class="knopf" id="knopf-computer">Gegen den Computer</button>
+        <button type="button" class="knopf" id="knopf-hotseat">Teams gegeneinander</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOBBY -->
+  <section id="s-lobby" class="screen" hidden aria-labelledby="titel-lobby">
+    <div class="links">
+      <div class="karte kopfkarte">
+        <h2 id="titel-lobby">Teams im Raum: <span id="lobby-anzahl">0</span></h2>
+        <p class="hand">Weitere Teams können noch dazukommen.</p>
+      </div>
+      <div class="team-raster" id="lobby-teams" aria-live="polite"></div>
+    </div>
+    <div class="rechts">
+      <div class="karte qr-karte nadel-blau">
+        <div class="qr-box" id="qr-lobby"></div>
+        <p class="raum">Raum <b id="raum-lobby">····</b></p>
+      </div>
+      <button type="button" class="knopf haupt start-knopf" id="knopf-start">Alle da – Spiel starten</button>
+      <p class="karte lobby-hinweis hand">Ohne Start geht es nach 90 Sekunden zurück zum Anfang.</p>
+      <button type="button" class="knopf leise" id="knopf-lobby-abbruch">Abbrechen</button>
+    </div>
+  </section>
+
+  <!-- SETUP für Spiel am Smartboard -->
+  <section id="s-setup" class="screen" hidden aria-labelledby="titel-setup">
+    <div class="karte kopfkarte">
+      <h2 id="titel-setup">Am Smartboard spielen</h2>
+      <p class="hand" id="setup-untertitel"></p>
+    </div>
+    <div class="karte setup-karte schief-l">
+      <h3>Wie viele Teams spielen?</h3>
+      <div class="wahl-reihe" id="setup-anzahl" role="group" aria-label="Anzahl Teams"></div>
+      <div id="setup-bot-block">
+        <h3>Wie stark ist der Computer?</h3>
+        <div class="wahl-reihe" id="setup-bot" role="group" aria-label="Stärke des Computers"></div>
+      </div>
+    </div>
+    <div class="karte setup-karte nadel-blau schief-r">
+      <h3>Eure Team-Namen</h3>
+      <div class="namen-liste" id="setup-namen"></div>
+    </div>
+    <div class="setup-aktionen">
+      <button type="button" class="knopf leise" id="knopf-setup-zurueck">Zurück</button>
+      <button type="button" class="knopf haupt start-knopf" id="knopf-setup-los">Los geht's</button>
+    </div>
+  </section>
+
+  <!-- FRAGE + AUFLÖSUNG -->
+  <section id="s-frage" class="screen" hidden aria-labelledby="frage-text">
+    <h2 class="karte frage-karte" id="frage-text"></h2>
+    <div class="antworten" id="antworten"></div>
+    <div class="zonen" id="zonen" hidden></div>
+    <div class="karte aufloesung schief-r" id="aufloesung" hidden></div>
+    <aside class="leiste">
+      <div class="karte timer-karte" id="timer-karte"><span class="timer-zahl" id="timer-zahl">20</span><br>Sekunden</div>
+      <div class="karte nadel-blau"><span class="gross" id="fortschritt">Frage 1 / 10</span><span id="geantwortet"></span></div>
+      <div class="karte"><span id="station-info"></span></div>
+      <button type="button" class="knopf weiter-knopf" id="knopf-weiter" hidden>Weiter</button>
+    </aside>
+  </section>
+
+  <!-- RANGLISTE -->
+  <section id="s-rang" class="screen" hidden aria-labelledby="titel-rang">
+    <div class="karte kopfkarte">
+      <h2 id="titel-rang">Zwischenstand</h2>
+      <p class="hand" id="rang-info"></p>
+    </div>
+    <ol class="rang-liste" id="rang-liste"></ol>
+  </section>
+
+  <!-- PODEST -->
+  <section id="s-podest" class="screen" hidden aria-labelledby="titel-podest">
+    <div class="karte kopfkarte">
+      <h2 id="titel-podest">Siegerehrung</h2>
+      <p class="hand">Danke fürs Mitspielen!</p>
+    </div>
+    <div class="podest" id="podest"></div>
+    <p class="podest-rest" id="podest-rest"></p>
+  </section>
+
+  <!-- FEEDBACK -->
+  <section id="s-feedback" class="screen" hidden aria-labelledby="titel-feedback">
+    <div class="karte kopfkarte">
+      <h2 id="titel-feedback">Kurze Rückmeldung</h2>
+      <p class="hand" id="fb-rest"></p>
+    </div>
+    <div class="karte fb-warten schief-l" id="fb-warten" hidden>
+      <p>Bitte beantwortet auf euren Tablets noch drei kurze Fragen.</p>
+      <p class="hand" id="fb-eingang">Noch keine Antworten.</p>
+    </div>
+    <div id="fb-host" hidden>
+      <div class="fb-host-form" id="fb-host-form"></div>
+    </div>
+    <div class="fb-aktionen" id="fb-aktionen">
+      <button type="button" class="knopf haupt" id="knopf-fb-senden" hidden>Absenden</button>
+      <button type="button" class="knopf leise" id="knopf-fb-fertig">Fertig</button>
+    </div>
+  </section>
+
+  <p class="muster" id="muster-hinweis" hidden></p>
+</div>
+
+<script src="vendor/qrcode-generator.js"></script>
+<script src="fragen-eingebettet.js"></script>
+<script src="common.js"></script>
+<script src="host.js"></script>
+</body>
+</html>

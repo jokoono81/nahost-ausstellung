@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "station": 4,
+  "typ": "szenarien",
+  "muster": true,
+  "titel": "Konfliktprognose: Wie könnte es weitergehen?",
+  "leitfrage": "Welche Entwicklungen sind nach der Knesset-Wahl am 27. Oktober 2026 denkbar – und wovon hängen sie ab?",
+  "anleitung": "Wähle ein Szenario. Du siehst, was es für die Beteiligten bedeuten würde und was dafür passieren müsste. Szenarien sind Denkmodelle, keine Vorhersagen.",
+  "stand": "Oktober 2026",
+  "szenarien": [
+    {
+      "titel": "Phase II des Friedensplans gelingt",
+      "form": "kreis",
+      "kurz": "Die Hamas gibt ihre Waffen schrittweise ab. Eine palästinensische Übergangsverwaltung und eine internationale Truppe übernehmen. Israels Armee zieht sich Schritt für Schritt zurück.",
+      "folgen": [
+        {"akteur": "Israel", "text": "Weniger Bedrohung aus Gaza, Soldaten können nach Hause. Streit bleibt, ob wirklich alle Waffen weg sind."},
+        {"akteur": "Menschen in Gaza", "text": "Grenzübergänge öffnen, Hilfe und Baumaterial kommen hinein. Der Wiederaufbau kann beginnen."},
+        {"akteur": "Hamas", "text": "Verliert ihre militärische Macht. Ob sie politisch weiter Einfluss hat, ist offen."},
+        {"akteur": "Internationale Gemeinschaft", "text": "Der „Board of Peace“ und Geberländer müssen Truppen und viel Geld für den Wiederaufbau stellen."}
+      ],
+      "bedingungen": [
+        "Israel und Hamas einigen sich, was zuerst kommt: Entwaffnung oder Abzug.",
+        "Genug Staaten schicken Soldaten für die Stabilisierungstruppe.",
+        "Die abgegebenen Waffen werden international überwacht.",
+        "Die neue israelische Regierung stimmt dem Fahrplan zu."
+      ],
+      "quelle": "tagesschau.de: Kushner spricht mit Netanjahu über Friedensplan (2026); UN-Resolution 2803"
+    },
+    {
+      "titel": "Die Waffenruhe zerfällt",
+      "form": "dreieck",
+      "kurz": "Der Streit über die Entwaffnung eskaliert. Die Kämpfe in Gaza beginnen wieder in großem Umfang.",
+      "folgen": [
+        {"akteur": "Israel", "text": "Soldaten sind wieder im Krieg, Raketenalarm wird wahrscheinlicher. Der Druck aus dem Ausland wächst."},
+        {"akteur": "Menschen in Gaza", "text": "Neue Flucht innerhalb des Gazastreifens, Hilfslieferungen stocken, Wiederaufbau wird unmöglich."},
+        {"akteur": "Hamas", "text": "Kämpft weiter und verliert Kämpfer – kann aber neue Anhänger gewinnen."},
+        {"akteur": "Vermittler (USA, Katar, Ägypten, Türkei)", "text": "Ihr Plan ist gescheitert. Sie verlieren Ansehen und Einfluss."}
+      ],
+      "bedingungen": [
+        "Keine Seite hält sich an die Absprachen.",
+        "Ein schwerer Anschlag oder Angriff löst eine Kettenreaktion aus.",
+        "Der internationale Druck auf beide Seiten lässt nach."
+      ],
+      "quelle": "tagesschau.de: Ein Jahr brüchige Gaza-Waffenruhe (10.10.2026)"
+    },
+    {
+      "titel": "Weder Krieg noch Frieden",
+      "form": "quadrat",
+      "kurz": "Alles bleibt, wie es ist: Israel kontrolliert rund 60 Prozent des Gazastreifens, die Hamas den Rest. Die Waffenruhe bleibt brüchig.",
+      "folgen": [
+        {"akteur": "Israel", "text": "Die Armee bleibt dauerhaft in Gaza gebunden. Einzelne Angriffe gehen weiter."},
+        {"akteur": "Menschen in Gaza", "text": "Viele leben weiter in Zelten und hängen von Hilfsorganisationen ab."},
+        {"akteur": "Hamas", "text": "Behält Waffen und Kontrolle in ihrem Teil des Gazastreifens."},
+        {"akteur": "Palästinensische Übergangsverwaltung", "text": "Sitzt in Ägypten fest und kann in Gaza nicht arbeiten."}
+      ],
+      "bedingungen": [
+        "Es muss nichts passieren – genau das macht diesen Zustand so hartnäckig.",
+        "Keine Seite hat genug Druck oder Anreiz, nachzugeben."
+      ],
+      "quelle": "tagesschau.de: Ein Jahr brüchige Gaza-Waffenruhe (10.10.2026)"
+    },
+    {
+      "titel": "Zwei-Staaten-Verhandlungen nach der Wahl",
+      "form": "raute",
+      "kurz": "Eine neue israelische Regierung und eine erneuerte palästinensische Führung verhandeln wieder über einen Staat Palästina neben Israel.",
+      "folgen": [
+        {"akteur": "Israel", "text": "Heftige Debatte im Land. Gefordert werden starke Sicherheitsgarantien."},
+        {"akteur": "Palästinenserinnen und Palästinenser", "text": "Hoffnung auf einen eigenen Staat – aber Streit, wer sie vertreten darf (PA oder Hamas)."},
+        {"akteur": "Israelische Siedlerbewegung", "text": "Starker Widerstand gegen jede Räumung von Siedlungen im Westjordanland."},
+        {"akteur": "Arabische Staaten", "text": "Saudi-Arabien und andere könnten ihre Beziehungen zu Israel normalisieren."}
+      ],
+      "bedingungen": [
+        "Die neue israelische Regierung ist zu Verhandlungen bereit. Netanjahu lehnt einen palästinensischen Staat bisher ab.",
+        "Die palästinensische Seite hat eine gewählte, anerkannte Führung.",
+        "Es gibt Lösungen für Siedlungen, Jerusalem und die Flüchtlinge.",
+        "USA und arabische Staaten geben Sicherheitsgarantien."
+      ],
+      "quelle": "tagesschau.de: Kushner spricht mit Netanjahu über Friedensplan (2026)"
+    }
+  ],
+  "widerspruch": {
+    "israelisch": "Erst muss die Hamas entwaffnet sein, dann kann die Armee abziehen. Ein palästinensischer Staat wäre heute ein Sicherheitsrisiko.",
+    "palaestinensisch": "Erst muss die Armee abziehen und die Besatzung enden, dann können Waffen abgegeben werden. Ohne eigenen Staat gibt es keinen dauerhaften Frieden.",
+    "einordnung": "Beide Seiten verlangen, dass die andere zuerst handelt. Der Friedensplan versucht, beides gleichzeitig und schrittweise zu regeln – genau darüber wird gestritten."
+  },
+  "quellen": [
+    {"titel": "Kushner spricht mit Netanjahu über Friedensplan für Gazastreifen", "herausgeber": "tagesschau.de", "url": "https://www.tagesschau.de/ausland/asien/israel-gazastreifen-usa-kushner-ben-gvir-100.html", "datum": "2026"},
+    {"titel": "Israel lehnt Trumps Plan zur Hamas-Entwaffnung ab", "herausgeber": "tagesschau.de", "url": "https://www.tagesschau.de/ausland/asien/netanjahu-hamas-entwaffnung-100.html", "datum": "08/2026"},
+    {"titel": "Ein Jahr brüchige Gaza-Waffenruhe", "herausgeber": "tagesschau.de", "url": "https://www.tagesschau.de/ausland/asien/israel-gaza-waffenruhe-112.html", "datum": "10.10.2026"},
+    {"titel": "Security Council Authorizes International Stabilization Force in Gaza (Resolution 2803)", "herausgeber": "Vereinte Nationen", "url": "https://press.un.org/en/2025/sc16225.doc.htm", "datum": "17.11.2025"},
+    {"titel": "Elections to the 26th Knesset, October 27th, 2026", "herausgeber": "Gov.il (Staat Israel)", "url": "https://www.gov.il/en/pages/knesset-elections-2026", "datum": "2026"}
+  ],
+  "eigeneQuelle": {"titel": "", "url": "", "begruendung": ""}
+}

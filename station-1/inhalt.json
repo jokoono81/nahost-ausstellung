@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "station": 1,
+  "typ": "zuordnen",
+  "muster": true,
+  "titel": "Konfliktinhalt: Wer will was?",
+  "leitfrage": "Welche Akteure sind am Konflikt beteiligt – und was wollen sie erreichen?",
+  "anleitung": "Ziehe jede Akteurs-Karte (oval) auf das passende Interesse (rechteckig). Oder: Karte antippen, dann Interesse antippen.",
+  "paare": [
+    {
+      "akteur": "Israelische Regierung",
+      "interesse": "Die Hamas soll alle Waffen abgeben. Vorher will die Armee ihre Stellungen in Gaza nicht verlassen.",
+      "rueckmeldung": "Richtig. Ministerpräsident Netanjahu sagte im August 2026: Kein Rückzug, bevor die Hamas vollständig entwaffnet ist.",
+      "quelle": "tagesschau.de, 08/2026"
+    },
+    {
+      "akteur": "Hamas",
+      "interesse": "Schwere Waffen nur abgeben, wenn die israelische Armee aus Gaza abzieht. Israel als Staat wird nicht anerkannt.",
+      "rueckmeldung": "Richtig. Die Hamas knüpft die Entwaffnung an den Abzug Israels. In ihrem Grundsatzpapier von 2017 erkennt sie Israel nicht an.",
+      "quelle": "tagesschau.de, 08/2026; Grundsatzdokument der Hamas 2017"
+    },
+    {
+      "akteur": "Palästinensische Autonomiebehörde (PA)",
+      "interesse": "Ein eigener Staat Palästina neben Israel – mit dem Westjordanland, Gaza und Ost-Jerusalem.",
+      "rueckmeldung": "Richtig. Die PA in Ramallah setzt seit den Oslo-Abkommen auf Verhandlungen und eine Zwei-Staaten-Lösung.",
+      "quelle": "bpb: Osloer Abkommen"
+    },
+    {
+      "akteur": "Israelische Siedlerbewegung",
+      "interesse": "Mehr jüdische Siedlungen im Westjordanland. Viele lehnen einen palästinensischen Staat dort ab.",
+      "rueckmeldung": "Richtig. Für viele Siedler ist das Westjordanland biblisches Kernland („Judäa und Samaria“). Die UN werten die Siedlungen als völkerrechtswidrig.",
+      "quelle": "bpb: Geschichte des Nahostkonflikts"
+    },
+    {
+      "akteur": "Zivilbevölkerung in Gaza",
+      "interesse": "Sicherheit, Wasser, Essen und Medizin – und die zerstörten Häuser wieder aufbauen.",
+      "rueckmeldung": "Richtig. Laut UN leben rund 1,5 Millionen Menschen in Gaza in Zelten oder Notunterkünften.",
+      "quelle": "tagesschau.de, 10.10.2026"
+    },
+    {
+      "akteur": "Angehörige der Geiseln",
+      "interesse": "Ein Abkommen, das alle Verschleppten nach Hause bringt – auch wenn Israel dafür den Krieg beenden muss.",
+      "rueckmeldung": "Richtig. Die Familien der am 7. Oktober 2023 Verschleppten drängten die Regierung zu einem Abkommen mit der Hamas.",
+      "quelle": "tagesschau.de: Geiseln der Hamas – Übersicht"
+    },
+    {
+      "akteur": "USA (Regierung Trump)",
+      "interesse": "Den eigenen 20-Punkte-Friedensplan durchsetzen – und Israel als engen Verbündeten unterstützen.",
+      "rueckmeldung": "Richtig. Präsident Trump leitet den „Board of Peace“ (Friedensrat), der den Plan umsetzen soll.",
+      "quelle": "UN-Sicherheitsrat, Resolution 2803 (2025)"
+    },
+    {
+      "akteur": "Katar und Ägypten (Vermittler)",
+      "interesse": "Zwischen Israel und Hamas vermitteln. Ägypten will verhindern, dass Menschen aus Gaza auf die Sinai-Halbinsel vertrieben werden.",
+      "rueckmeldung": "Richtig. Katar und Ägypten vermittelten die Waffenruhe mit. Ägypten nennt eine Vertreibung auf den Sinai eine „rote Linie“.",
+      "quelle": "Ahram Online, 2026"
+    },
+    {
+      "akteur": "Iran",
+      "interesse": "Israels Macht in der Region schwächen – durch Geld und Waffen für Hamas, Hisbollah und Huthi.",
+      "rueckmeldung": "Richtig. Iran nennt dieses Bündnis „Achse des Widerstands“.",
+      "quelle": "bpb: Achse des Widerstands"
+    }
+  ],
+  "widerspruch": {
+    "israelisch": "Sicherheit kommt zuerst: Erst wenn die Hamas keine Waffen mehr hat, kann es Frieden und einen Abzug geben.",
+    "palaestinensisch": "Freiheit kommt zuerst: Erst wenn Besatzung und Blockade enden, kann es Sicherheit für alle geben.",
+    "einordnung": "Beide Seiten sagen, sie wollen Frieden. Sie streiten aber darüber, was zuerst kommen muss. Genau an dieser Reihenfolge hängt der Friedensplan seit Monaten fest."
+  },
+  "quellen": [
+    {"titel": "Israel lehnt Trumps Plan zur Hamas-Entwaffnung ab", "herausgeber": "tagesschau.de", "url": "https://www.tagesschau.de/ausland/asien/netanjahu-hamas-entwaffnung-100.html", "datum": "08/2026"},
+    {"titel": "Ein Jahr brüchige Gaza-Waffenruhe", "herausgeber": "tagesschau.de", "url": "https://www.tagesschau.de/ausland/asien/israel-gaza-waffenruhe-112.html", "datum": "10.10.2026"},
+    {"titel": "Geiseln der Hamas – eine Übersicht", "herausgeber": "tagesschau.de", "url": "https://www.tagesschau.de/ausland/asien/geiseln-hamas-uebersicht-102.html", "datum": ""},
+    {"titel": "Geschichte des Nahostkonflikts", "herausgeber": "Bundeszentrale für politische Bildung", "url": "https://www.bpb.de/themen/naher-mittlerer-osten/israel/45042/geschichte-des-nahostkonflikts/", "datum": ""},
+    {"titel": "Osloer Abkommen als Meilensteine im Nahost-Friedensprozess", "herausgeber": "Bundeszentrale für politische Bildung", "url": "https://www.bpb.de/kurz-knapp/hintergrund-aktuell/275803/osloer-abkommen-als-meilensteine-im-nahost-friedensprozess/", "datum": ""},
+    {"titel": "Achse des Widerstands: Iran und der Nahostkrieg", "herausgeber": "Bundeszentrale für politische Bildung", "url": "https://www.bpb.de/themen/naher-mittlerer-osten/iran/543559/achse-des-widerstands-iran-und-der-nahostkrieg/", "datum": ""},
+    {"titel": "Security Council Authorizes International Stabilization Force in Gaza (Resolution 2803)", "herausgeber": "Vereinte Nationen", "url": "https://press.un.org/en/2025/sc16225.doc.htm", "datum": "17.11.2025"},
+    {"titel": "Palestinians displacement to Sinai is ‘red line’ for Egypt", "herausgeber": "Ahram Online", "url": "https://english.ahram.org.eg/NewsContentP/1/575233/Egypt/Palestinians-displacement-to-Sinai-is-%E2%80%98red-line%E2%80%99-f.aspx", "datum": "2026"},
+    {"titel": "Hamas in 2017: The document in full", "herausgeber": "Middle East Eye", "url": "https://www.middleeasteye.net/news/hamas-2017-document-full", "datum": "2017"}
+  ],
+  "eigeneQuelle": {"titel": "", "url": "", "begruendung": ""}
+}

@@ -1,0 +1,237 @@
+{
+ "version": 1,
+ "station": 5,
+ "typ": "echtoderfake",
+ "muster": true,
+ "titel": "Wahrnehmung: Echt oder Fake?",
+ "leitfrage": "Wie prägen Bilder und Posts in sozialen Medien unser Bild vom Konflikt?",
+ "anleitung": "Lies die Beschreibung des Posts. Ist er echt, gefälscht oder aus dem Zusammenhang gerissen? Tippe deine Antwort an. Alle Fälle wurden von Faktencheck-Redaktionen geprüft (Links geprüft am 16.10.2026).",
+ "faelle": [
+  {
+   "plattform": "X und Facebook",
+   "beschreibung": "Ein Bild zeigt einen Vater, der in Gaza fünf Kinder auf einmal durch Trümmer trägt. Es wurde hunderttausendfach geteilt – sogar von einer Botschaft.",
+   "behauptung": "„So sieht der Alltag in Gaza aus.“",
+   "urteil": "gefaelscht",
+   "aufloesung": "Das Bild ist kein Foto, sondern mit Künstlicher Intelligenz erzeugt. Wichtig: Es gibt viele echte Belege für Leid und Zerstörung in Gaza – dieses Bild gehört nicht dazu.",
+   "pruefer": "CORRECTIV.Faktencheck",
+   "url": "https://correctiv.org/faktencheck/2023/11/08/dieses-bild-von-einem-mann-mit-fuenf-kindern-in-gaza-wurde-mit-kuenstlicher-intelligenz-generiert/",
+   "datum": "08.11.2023"
+  },
+  {
+   "plattform": "X (früher Twitter)",
+   "beschreibung": "Ein Video zeigt, wie Raketen auf einen Hubschrauber abgefeuert werden. Der Hubschrauber explodiert.",
+   "behauptung": "„Hamas-Kämpfer schießen in Gaza einen israelischen Kampfhubschrauber ab.“",
+   "urteil": "kontext",
+   "aufloesung": "Die Szene stammt aus dem Computerspiel „Arma 3“ – nicht aus Gaza.",
+   "pruefer": "ARD-faktenfinder (tagesschau.de)",
+   "url": "https://www.tagesschau.de/faktenfinder/israel-hamas-fakes-100.html",
+   "datum": "10.10.2023"
+  },
+  {
+   "plattform": "X und TikTok",
+   "beschreibung": "Ein Video zeigt zwei kleine Mädchen, die weinend mit bewaffneten Uniformierten sprechen.",
+   "behauptung": "„Israelische Soldaten entführen im Oktober 2023 zwei palästinensische Mädchen.“",
+   "urteil": "kontext",
+   "aufloesung": "Das Video ist echt, aber von Mai 2021 aus Jerusalem: Die Mädchen bitten Polizisten, ihren Bruder nicht festzunehmen. Mit dem Gaza-Krieg hat es nichts zu tun.",
+   "pruefer": "DW Fact check",
+   "url": "https://dw.com/en/fact-check-fake-videos-circulating-over-hamas-attack-on-israel/a-67058015",
+   "datum": "10.10.2023"
+  },
+  {
+   "plattform": "TikTok und Instagram",
+   "beschreibung": "Kurze Videos zeigen frierende Kinder und alte Menschen im dichten Schneetreiben in Gaza (Winter 2025/26).",
+   "behauptung": "„Schneesturm in Gaza – die Menschen erfrieren in Zelten.“",
+   "urteil": "gefaelscht",
+   "aufloesung": "Die Clips sind mit KI erzeugt: Wind und Fahnen wehen in verschiedene Richtungen, und in Gaza war es kaum kälter als 10 °C. Echte Unwetter mit Sturm und Regen gab es dort aber.",
+   "pruefer": "APA-Faktencheck / GADMO",
+   "url": "https://gadmo.eu/apa-faktencheck-ki-schnee-videos-aus-gaza-sollen-emotionen-schren/",
+   "datum": "09.01.2026"
+  },
+  {
+   "plattform": "X (früher Twitter)",
+   "beschreibung": "Ein Foto zeigt ein Kind in einem weißen Sack, das dabei auf ein Handy schaut.",
+   "behauptung": "„Palästinenser spielen Tote – alles nur Theater (#Pallywood).“",
+   "urteil": "kontext",
+   "aufloesung": "Das Foto zeigt ein Kind im Halloween-Kostüm bei einem Wettbewerb in Thailand. Es wurde schon 2022 gepostet – fast ein Jahr vor dem 7. Oktober 2023.",
+   "pruefer": "AAP FactCheck (Australien)",
+   "url": "https://www.aap.com.au/factcheck/gaza-crisis-actor-is-actually-thai-child-in-halloween-costume/",
+   "datum": "08.11.2023"
+  },
+  {
+   "plattform": "Instagram",
+   "beschreibung": "Ein offizieller Account des israelischen Außenministeriums stellt zwei Fotos von Menschen mit leeren Töpfen in Gaza nebeneinander.",
+   "behauptung": "„Das Foto ist gestellt – gemachte Gefühle.“",
+   "urteil": "echt",
+   "aufloesung": "Die Fotos sind echt und zeigen nicht dieselbe Szene: andere Menschen, andere Töpfe, andere Fotografen. Die Behauptung „inszeniert“ ist falsch.",
+   "pruefer": "DW Fact check",
+   "url": "https://www.dw.com/en/fact-check-gaza-famine-photos-not-staged/a-73626929",
+   "datum": "15.08.2025"
+  },
+  {
+   "plattform": "X (früher Twitter)",
+   "beschreibung": "Ein Video zeigt uniformierte Hamas-Kämpfer auf Pick-ups. Es wird kurz nach Beginn der Waffenruhe im Oktober 2025 geteilt.",
+   "behauptung": "„Jetzt, wo Waffenstillstand ist, hat die Hamas plötzlich ihre Uniformen gefunden.“",
+   "urteil": "kontext",
+   "aufloesung": "Das Video ist alt: Es stammt vom Januar 2025 und zeigt eine Szene vor einer Geiselübergabe bei der damaligen Waffenruhe.",
+   "pruefer": "ARD-faktenfinder (tagesschau.de)",
+   "url": "https://www.tagesschau.de/faktenfinder/israel-gaza-fakes-100.html",
+   "datum": "13.10.2025"
+  },
+  {
+   "plattform": "X und Telegram",
+   "beschreibung": "Ein Screenshot sieht aus wie eine Seite des ägyptischen Amazon-Shops.",
+   "behauptung": "„Dort werden israelische Geiseln der Hamas zum Kauf angeboten.“",
+   "urteil": "gefaelscht",
+   "aufloesung": "Der Screenshot ist eine Fotomontage. Amazon hat geprüft: Solche Angebote gab es nicht.",
+   "pruefer": "BR24 #Faktenfuchs",
+   "url": "https://www.br.de/nachrichten/netzwelt/faktenfuchs-bilder-und-videos-aus-israel-im-check,TsTIhO6",
+   "datum": "12.10.2023"
+  },
+  {
+   "plattform": "Telegram und X",
+   "beschreibung": "Ein Video sieht aus wie ein Bericht der BBC und beruft sich auf das Recherche-Netzwerk Bellingcat.",
+   "behauptung": "„Die Ukraine hat westliche Waffen an die Hamas geliefert.“",
+   "urteil": "gefaelscht",
+   "aufloesung": "Diesen Bericht gibt es nicht – BBC und Bellingcat nennen das Video eine Fälschung. Verbreitet haben es prorussische Kanäle: Ein dritter Akteur nutzt den Nahost-Krieg für eigene Ziele.",
+   "pruefer": "CORRECTIV.Faktencheck",
+   "url": "https://correctiv.org/faktencheck/2023/10/23/ukraine-hamas-gefaelschter-bbc-bericht-bellingcat-bestaetigte-keinen-waffenschmuggel/",
+   "datum": "23.10.2023"
+  },
+  {
+   "plattform": "X (früher Twitter)",
+   "beschreibung": "Ein graues, unscharfes Drohnenvideo zeigt ein riesiges Gebiet mit zerstörten Häusern in Gaza. Über 9 Millionen Aufrufe – viele schreiben: „Das ist doch KI!“",
+   "behauptung": "„Das Video ist ein KI-Fake.“",
+   "urteil": "echt",
+   "aufloesung": "Das Video ist echt: Es zeigt das Flüchtlingslager Jabaliya, stammt von einem Fotografen vor Ort und wird durch Satellitenbilder bestätigt. Nicht alles, was verdächtig aussieht, ist gefälscht.",
+   "pruefer": "DW Fact check",
+   "url": "https://dw.com/en/fact-check-viral-drone-video-of-gaza-destruction-is-real/a-72968972",
+   "datum": "19.06.2025"
+  }
+ ],
+ "tipps": [
+  "Wer hat das zuerst gepostet? Original suchen.",
+  "Rückwärtssuche: Gibt es das Bild oder Video schon länger?",
+  "Passen Ort, Wetter, Sprache und Schilder zur Behauptung?",
+  "Haben seriöse Faktenchecks schon darüber berichtet?"
+ ],
+ "widerspruch": {
+  "israelisch": "Viele Israelis halten internationale Medien für parteiisch gegen Israel – zum Beispiel, weil sie Opferzahlen der von der Hamas kontrollierten Behörden übernehmen.",
+  "palaestinensisch": "Viele Palästinenserinnen und Palästinenser halten westliche Medien für parteiisch für Israel – zum Beispiel, weil Leid in Gaza weniger Aufmerksamkeit bekommt.",
+  "einordnung": "Beide Seiten fühlen sich unfair dargestellt. Dazu kommt: Israel lässt ausländische Journalistinnen und Journalisten seit Oktober 2023 nicht unabhängig nach Gaza. Viele Bilder lassen sich deshalb schwer prüfen."
+ },
+ "quellen": [
+  {
+   "titel": "KI-Bild: Vater mit fünf Kindern vor Trümmern",
+   "herausgeber": "CORRECTIV.Faktencheck",
+   "url": "https://correctiv.org/faktencheck/2023/11/08/dieses-bild-von-einem-mann-mit-fuenf-kindern-in-gaza-wurde-mit-kuenstlicher-intelligenz-generiert/",
+   "datum": "08.11.2023"
+  },
+  {
+   "titel": "Computerspiel statt Hamas-Angriff",
+   "herausgeber": "ARD-faktenfinder (tagesschau.de)",
+   "url": "https://www.tagesschau.de/faktenfinder/israel-hamas-fakes-100.html",
+   "datum": "10.10.2023"
+  },
+  {
+   "titel": "Angebliche Entführung zweier Mädchen durch israelische Soldaten",
+   "herausgeber": "DW Fact check",
+   "url": "https://dw.com/en/fact-check-fake-videos-circulating-over-hamas-attack-on-israel/a-67058015",
+   "datum": "10.10.2023"
+  },
+  {
+   "titel": "KI-Schneevideos aus Gaza",
+   "herausgeber": "APA-Faktencheck / GADMO",
+   "url": "https://gadmo.eu/apa-faktencheck-ki-schnee-videos-aus-gaza-sollen-emotionen-schren/",
+   "datum": "09.01.2026"
+  },
+  {
+   "titel": "„Krisendarsteller“ mit Handy im Leichensack",
+   "herausgeber": "AAP FactCheck (Australien)",
+   "url": "https://www.aap.com.au/factcheck/gaza-crisis-actor-is-actually-thai-child-in-halloween-costume/",
+   "datum": "08.11.2023"
+  },
+  {
+   "titel": "Hunger-Fotos angeblich „inszeniert“",
+   "herausgeber": "DW Fact check",
+   "url": "https://www.dw.com/en/fact-check-gaza-famine-photos-not-staged/a-73626929",
+   "datum": "15.08.2025"
+  },
+  {
+   "titel": "Altes Hamas-Video zur Waffenruhe 2025",
+   "herausgeber": "ARD-faktenfinder (tagesschau.de)",
+   "url": "https://www.tagesschau.de/faktenfinder/israel-gaza-fakes-100.html",
+   "datum": "13.10.2025"
+  },
+  {
+   "titel": "Gefälschter Amazon-Screenshot: Geiseln „zu verkaufen“",
+   "herausgeber": "BR24 #Faktenfuchs",
+   "url": "https://www.br.de/nachrichten/netzwelt/faktenfuchs-bilder-und-videos-aus-israel-im-check,TsTIhO6",
+   "datum": "12.10.2023"
+  },
+  {
+   "titel": "Gefälschter BBC-Bericht: Waffen aus der Ukraine für die Hamas",
+   "herausgeber": "CORRECTIV.Faktencheck",
+   "url": "https://correctiv.org/faktencheck/2023/10/23/ukraine-hamas-gefaelschter-bbc-bericht-bellingcat-bestaetigte-keinen-waffenschmuggel/",
+   "datum": "23.10.2023"
+  },
+  {
+   "titel": "Gegenbeispiel: Drohnenvideo als „KI-Fake“ verdächtigt – ist aber echt",
+   "herausgeber": "DW Fact check",
+   "url": "https://dw.com/en/fact-check-viral-drone-video-of-gaza-destruction-is-real/a-72968972",
+   "datum": "19.06.2025"
+  },
+  {
+   "titel": "ARD-faktenfinder",
+   "herausgeber": "tagesschau.de / ARD",
+   "url": "https://www.tagesschau.de/faktenfinder",
+   "datum": ""
+  },
+  {
+   "titel": "CORRECTIV.Faktencheck",
+   "herausgeber": "CORRECTIV (gemeinnütziges Recherchezentrum)",
+   "url": "https://correctiv.org/faktencheck/",
+   "datum": ""
+  },
+  {
+   "titel": "#Faktenfuchs Faktenchecks",
+   "herausgeber": "BR24 (Bayerischer Rundfunk)",
+   "url": "https://www.br.de/nachrichten/faktenfuchs-faktencheck,QzSIzl3",
+   "datum": ""
+  },
+  {
+   "titel": "DW Faktencheck",
+   "herausgeber": "Deutsche Welle",
+   "url": "https://www.dw.com/de/faktencheck/t-56578552",
+   "datum": ""
+  },
+  {
+   "titel": "Wahrnehmungen der Nahostberichterstattung deutscher Medien (Befunde einer repräsentativen Befragung)",
+   "herausgeber": "LMU München, Prof. C. Reinemann (CIVIS Mediendialog, 26.11.2025)",
+   "url": "https://www.civismedia.eu/wp-content/uploads/2025/11/Erste-Befunde-Medienvertrauen-Nahost-II-Reinemann-LMU_.pdf",
+   "datum": ""
+  },
+  {
+   "titel": "How to Make Atrocities That Are Happening an Hour’s Drive from Home Disappear: Eight Techniques of Israeli Mainstream Media",
+   "herausgeber": "The Seventh Eye / HaAyin HaShevi'it (israelische Medienbeobachtung)",
+   "url": "https://the7eye.org.il/560629",
+   "datum": ""
+  },
+  {
+   "titel": "7amleh 2026 Mid-Year Report",
+   "herausgeber": "7amleh – Arab Center for Social Media Advancement (Haifa)",
+   "url": "https://7amleh.org/mid26/en/",
+   "datum": ""
+  },
+  {
+   "titel": "Gerichtliche Anhörung über Zugang internationaler Medien zum Gazastreifen",
+   "herausgeber": "Deutschlandfunk",
+   "url": "https://www.deutschlandfunk.de/gerichtliche-anhoerung-ueber-zugang-internationaler-medien-zum-gazastreifen-geplant-102.html",
+   "datum": ""
+  }
+ ],
+ "eigeneQuelle": {
+  "titel": "",
+  "url": "",
+  "begruendung": ""
+ }
+}

@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "station": 3,
+  "typ": "theoriebrille",
+  "muster": true,
+  "titel": "Konfliktstrukturen: Welche Theorie-Brille?",
+  "leitfrage": "Welche tieferen Ursachen und Machtverhältnisse halten den Konflikt am Laufen?",
+  "anleitung": "Lies die Aussage. Durch welche Theorie-Brille schaut man hier am besten? Tippe eine Brille an.",
+  "brillen": [
+    {"id": "realismus", "name": "Realismus", "form": "quadrat", "kurz": "Staaten und Gruppen wollen Macht und Sicherheit. Jeder verlässt sich vor allem auf die eigene Stärke."},
+    {"id": "liberalismus", "name": "Idealismus / Liberalismus", "form": "kreis", "kurz": "Zusammenarbeit, Regeln, Handel und internationale Organisationen wie die UN können Frieden sichern."},
+    {"id": "hexagon", "name": "Senghaas-Hexagon", "form": "sechseck", "kurz": "Sechs Bausteine für inneren Frieden: Gewaltmonopol, Rechtsstaat, demokratische Beteiligung, soziale Gerechtigkeit, Konfliktkultur, Affektkontrolle."},
+    {"id": "galtung", "name": "Galtung: Gewalt und Frieden", "form": "dreieck", "kurz": "Kein Krieg ist nur negativer Frieden. Positiver Frieden braucht Gerechtigkeit. Strukturelle Gewalt steckt in ungerechten Verhältnissen."}
+  ],
+  "aussagen": [
+    {
+      "aussage": "Israels Regierung sagt: Unsere Armee zieht sich erst zurück, wenn die Hamas vollständig entwaffnet ist.",
+      "herkunft": "nach tagesschau.de, August 2026",
+      "brille": "realismus",
+      "erklaerung": "Sicherheit durch eigene militärische Stärke – man verlässt sich nicht auf Versprechen der Gegenseite. Das ist typisch realistisches Denken.",
+      "quelle": "tagesschau.de: Israel lehnt Trumps Plan zur Hamas-Entwaffnung ab"
+    },
+    {
+      "aussage": "Iran unterstützt Hamas, Hisbollah und die Huthi mit Geld und Waffen – als „Achse des Widerstands“ gegen Israel und die USA.",
+      "herkunft": "nach bpb",
+      "brille": "realismus",
+      "erklaerung": "Ein Staat baut Bündnisse auf, um seinen Einfluss zu vergrößern und Rivalen zu schwächen. Es geht um Machtgleichgewicht in der Region.",
+      "quelle": "bpb: Achse des Widerstands"
+    },
+    {
+      "aussage": "Der UN-Sicherheitsrat hat im November 2025 den Friedensplan unterstützt und eine internationale Stabilisierungstruppe für Gaza erlaubt.",
+      "herkunft": "UN-Resolution 2803, 17.11.2025",
+      "brille": "liberalismus",
+      "erklaerung": "Eine internationale Organisation setzt Regeln und organisiert gemeinsames Handeln. Das ist der Kern der liberalen Sicht.",
+      "quelle": "Vereinte Nationen: Resolution 2803"
+    },
+    {
+      "aussage": "2020 vereinbarten Israel, die Vereinigten Arabischen Emirate und Bahrain mit den Abraham-Abkommen Handel, Direktflüge und Tourismus.",
+      "herkunft": "Abraham-Abkommen, 2020",
+      "brille": "liberalismus",
+      "erklaerung": "Wer miteinander Handel treibt und reist, hat mehr zu verlieren, wenn es Krieg gibt. Liberale nennen das Interdependenz (gegenseitige Abhängigkeit).",
+      "quelle": "U.S. Department of State: The Abraham Accords"
+    },
+    {
+      "aussage": "Im Gazastreifen hatte seit 2007 nicht die Palästinensische Autonomiebehörde das Sagen, sondern die bewaffnete Hamas.",
+      "herkunft": "nach bpb",
+      "brille": "hexagon",
+      "erklaerung": "Es fehlt ein gemeinsames Gewaltmonopol: Zwei Machtzentren mit Waffen stehen sich gegenüber. Das ist der erste Baustein im Hexagon.",
+      "quelle": "bpb: Geschichte des Nahostkonflikts"
+    },
+    {
+      "aussage": "In den palästinensischen Gebieten gab es seit 2006 keine Parlamentswahl mehr.",
+      "herkunft": "nach Konrad-Adenauer-Stiftung",
+      "brille": "hexagon",
+      "erklaerung": "Ohne Wahlen fehlt demokratische Beteiligung. Menschen können Konflikte nicht friedlich über Wahlen austragen – ein Baustein des Hexagons.",
+      "quelle": "KAS: Die Wahlen zum Palästinensischen Legislativrat vom 25. Januar 2006"
+    },
+    {
+      "aussage": "Schon vor dem Krieg war im Gazastreifen fast jede zweite Person ohne Arbeit (2022: 45 Prozent).",
+      "herkunft": "UNCTAD, Oktober 2023",
+      "brille": "galtung",
+      "erklaerung": "Niemand schießt – und trotzdem werden Lebenschancen verhindert. Galtung nennt das strukturelle Gewalt.",
+      "quelle": "UNCTAD: Prior to current crisis, decades-long blockade hollowed Gaza’s economy"
+    },
+    {
+      "aussage": "Seit Oktober 2025 gilt offiziell eine Waffenruhe. Trotzdem leben rund 1,5 Millionen Menschen in Gaza in Zelten oder Notunterkünften, und für die meisten jüdischen Israelis bleibt Sicherheit das wichtigste Wahlthema.",
+      "herkunft": "nach tagesschau.de, 10.10.2026",
+      "brille": "galtung",
+      "erklaerung": "Die großen Kämpfe sind vorbei – das ist höchstens negativer Frieden. Positiver Frieden mit Sicherheit und Gerechtigkeit für alle ist noch weit weg.",
+      "quelle": "tagesschau.de: Ein Jahr brüchige Gaza-Waffenruhe"
+    }
+  ],
+  "widerspruch": {
+    "israelisch": "Der Kern ist ein Sicherheitsproblem: Bewaffnete Gruppen und Iran bedrohen Israel. Frieden braucht zuerst Abschreckung und Entwaffnung.",
+    "palaestinensisch": "Der Kern ist ein Gerechtigkeitsproblem: Besatzung, Blockade und fehlende Rechte erzeugen Gewalt. Frieden braucht zuerst Freiheit und Gleichberechtigung.",
+    "einordnung": "Die beiden Erzählungen setzen verschiedene Theorie-Brillen auf: eher Realismus auf der einen, eher Galtung auf der anderen Seite. Eine gute Analyse prüft beide."
+  },
+  "quellen": [
+    {"titel": "Israel lehnt Trumps Plan zur Hamas-Entwaffnung ab", "herausgeber": "tagesschau.de", "url": "https://www.tagesschau.de/ausland/asien/netanjahu-hamas-entwaffnung-100.html", "datum": "08/2026"},
+    {"titel": "Achse des Widerstands: Iran und der Nahostkrieg", "herausgeber": "Bundeszentrale für politische Bildung", "url": "https://www.bpb.de/themen/naher-mittlerer-osten/iran/543559/achse-des-widerstands-iran-und-der-nahostkrieg/", "datum": ""},
+    {"titel": "Security Council Authorizes International Stabilization Force in Gaza (Resolution 2803)", "herausgeber": "Vereinte Nationen", "url": "https://press.un.org/en/2025/sc16225.doc.htm", "datum": "17.11.2025"},
+    {"titel": "The Abraham Accords", "herausgeber": "U.S. Department of State", "url": "https://www.state.gov/the-abraham-accords", "datum": ""},
+    {"titel": "Geschichte des Nahostkonflikts", "herausgeber": "Bundeszentrale für politische Bildung", "url": "https://www.bpb.de/themen/naher-mittlerer-osten/israel/45042/geschichte-des-nahostkonflikts/", "datum": ""},
+    {"titel": "Die Wahlen zum Palästinensischen Legislativrat vom 25. Januar 2006 (PDF)", "herausgeber": "Konrad-Adenauer-Stiftung", "url": "https://www.kas.de/c/document_library/get_file?uuid=ec0408f5-48e1-34d8-563e-c68cf0737df1&groupId=252038", "datum": "2006"},
+    {"titel": "Prior to current crisis, decades-long blockade hollowed Gaza’s economy", "herausgeber": "UNCTAD", "url": "https://unctad.org/press-material/prior-current-crisis-decades-long-blockade-hollowed-gazas-economy-leaving-80", "datum": "25.10.2023"},
+    {"titel": "Ein Jahr brüchige Gaza-Waffenruhe", "herausgeber": "tagesschau.de", "url": "https://www.tagesschau.de/ausland/asien/israel-gaza-waffenruhe-112.html", "datum": "10.10.2026"},
+    {"titel": "Das zivilisatorische Hexagon – Dieter Senghaas", "herausgeber": "Friedensbildung Baden-Württemberg (LpB)", "url": "https://www.friedensbildung-bw.de/friedenskonzepte-und-friedenstheorien/das-zivilisatorische-hexagon-dieter-senghaas", "datum": ""}
+  ],
+  "eigeneQuelle": {"titel": "", "url": "", "begruendung": ""}
+}

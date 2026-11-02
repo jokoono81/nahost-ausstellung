@@ -1,0 +1,203 @@
+/* Automatisch erzeugt aus fragen.json (nah_build_fragen_fallback.py). Nur Notfall-Kopie für file://-Betrieb. */
+window.NAHOST_FRAGEN_EINGEBETTET = {
+ "version": 1,
+ "titel": "Musterfragen – werden vom LK ersetzt",
+ "fragen": [
+  {
+   "station": 1,
+   "frage": "Was ist OCHA?",
+   "antworten": [
+    "Ein Büro der Vereinten Nationen, das humanitäre Hilfe koordiniert",
+    "Eine Einheit der israelischen Armee",
+    "Eine palästinensische Partei",
+    "Ein Militärbündnis arabischer Staaten"
+   ],
+   "richtig": 0,
+   "erklaerung": "OCHA ist das UN-Büro für die Koordinierung humanitärer Angelegenheiten. Es stimmt Hilfe in Krisen ab und veröffentlicht Lageberichte, auch zu Gaza und dem Westjordanland.",
+   "quelle": "UN OCHA, unocha.org – „Who we are“",
+   "zeit": 20
+  },
+  {
+   "station": 1,
+   "frage": "Welche Organisation führte den Terrorangriff auf Israel am 7. Oktober 2023 an?",
+   "antworten": [
+    "Fatah",
+    "Hamas",
+    "PLO",
+    "Hisbollah"
+   ],
+   "richtig": 1,
+   "erklaerung": "Bewaffnete Kämpfer unter Führung der Hamas drangen aus dem Gazastreifen nach Israel ein. Rund 1.200 Menschen wurden getötet, etwa 250 als Geiseln nach Gaza verschleppt.",
+   "quelle": "Bundeszentrale für politische Bildung (bpb.de), Hintergrund aktuell zum 7. Oktober 2023",
+   "zeit": 20
+  },
+  {
+   "station": 1,
+   "frage": "Wer kontrolliert seit 2007 den Gazastreifen?",
+   "antworten": [
+    "Die Vereinten Nationen",
+    "Ägypten",
+    "Die Hamas",
+    "Die Palästinensische Autonomiebehörde unter Fatah"
+   ],
+   "richtig": 2,
+   "erklaerung": "Nach dem Wahlsieg der Hamas 2006 kam es zu Kämpfen mit der Fatah. Im Juni 2007 übernahm die Hamas gewaltsam die Kontrolle im Gazastreifen. Die Fatah blieb im Westjordanland.",
+   "quelle": "Bundeszentrale für politische Bildung (bpb.de), Dossier Israel / Nahost-Konflikt",
+   "zeit": 20
+  },
+  {
+   "station": 2,
+   "frage": "Wofür steht das Jahr 1948 in den beiden Erzählungen?",
+   "antworten": [
+    "Für beide Seiten: Unterzeichnung des Oslo-Abkommens",
+    "Für Israel: Rückzug aus Gaza – für Palästinenser: Wahlsieg der Hamas",
+    "Für beide Seiten: das Ende aller Kriege in der Region",
+    "Für Israel: Staatsgründung – für Palästinenser: Nakba (Flucht und Vertreibung)"
+   ],
+   "richtig": 3,
+   "erklaerung": "Am 14. Mai 1948 wurde der Staat Israel ausgerufen, danach folgte Krieg mit arabischen Staaten. Rund 700.000 Palästinenserinnen und Palästinenser flohen oder wurden vertrieben. Sie nennen das „Nakba“ (Katastrophe).",
+   "quelle": "Bundeszentrale für politische Bildung (bpb.de), Dossier Israel – Staatsgründung und Nakba",
+   "zeit": 25
+  },
+  {
+   "station": 2,
+   "frage": "Welche Gebiete besetzte Israel im Sechstagekrieg 1967 unter anderem?",
+   "antworten": [
+    "Westjordanland, Ostjerusalem und Gazastreifen",
+    "Zypern und Kreta",
+    "Beirut und den Südlibanon",
+    "Teile des Irak"
+   ],
+   "richtig": 0,
+   "erklaerung": "Im Juni 1967 eroberte Israel das Westjordanland mit Ostjerusalem, den Gazastreifen, die Golanhöhen und die Sinai-Halbinsel. Den Sinai gab Israel später an Ägypten zurück.",
+   "quelle": "Bundeszentrale für politische Bildung (bpb.de), Dossier Israel – Sechstagekrieg 1967",
+   "zeit": 20
+  },
+  {
+   "station": 2,
+   "frage": "Was vereinbarten Israel und die PLO 1993 im Oslo-Abkommen?",
+   "antworten": [
+    "Einen palästinensischen Staat ab sofort",
+    "Gegenseitige Anerkennung und eine schrittweise palästinensische Selbstverwaltung",
+    "Eine gemeinsame Armee",
+    "Den Abzug Israels aus allen Gebieten bis 1994"
+   ],
+   "richtig": 1,
+   "erklaerung": "Israel erkannte die PLO als Vertretung der Palästinenser an, die PLO erkannte das Existenzrecht Israels an. Vereinbart wurde eine Übergangs-Selbstverwaltung. Schwierige Fragen wie Jerusalem und Flüchtlinge wurden vertagt.",
+   "quelle": "Bundeszentrale für politische Bildung (bpb.de), Dossier Israel – Der Oslo-Prozess",
+   "zeit": 25
+  },
+  {
+   "station": 2,
+   "frage": "Was geschah 2005 im Gazastreifen?",
+   "antworten": [
+    "Die Hamas gewann die Parlamentswahl",
+    "Ägypten übernahm die Verwaltung",
+    "Israel zog seine Soldaten und Siedlungen aus dem Gazastreifen ab",
+    "Der Gazastreifen wurde ein eigener Staat"
+   ],
+   "richtig": 2,
+   "erklaerung": "Im Sommer 2005 räumte Israel alle Siedlungen im Gazastreifen und zog die Armee ab. Die Grenzen, den Luftraum und die Küste kontrollierte Israel weiterhin.",
+   "quelle": "Bundeszentrale für politische Bildung (bpb.de), Dossier Israel – Abzug aus Gaza 2005",
+   "zeit": 20
+  },
+  {
+   "station": 3,
+   "frage": "Welche Theorie erklärt internationale Politik vor allem mit Macht und Sicherheit von Staaten?",
+   "antworten": [
+    "Idealismus (Liberalismus)",
+    "Galtungs Friedensbegriff",
+    "Senghaas' Zivilisatorisches Hexagon",
+    "Realismus"
+   ],
+   "richtig": 3,
+   "erklaerung": "Der Realismus geht davon aus, dass Staaten in einer Welt ohne übergeordnete Macht vor allem ihre Sicherheit und Macht sichern wollen.",
+   "quelle": "Hans J. Morgenthau: Politics Among Nations (1948); Sowi-Lehrbuch Q2, Kapitel Internationale Sicherheit",
+   "zeit": 20
+  },
+  {
+   "station": 3,
+   "frage": "Was meint Johan Galtung mit „negativem Frieden“?",
+   "antworten": [
+    "Es herrscht kein Krieg, also keine direkte Gewalt",
+    "Ein Frieden, den alle schlecht finden",
+    "Gerechtigkeit und gleiche Chancen für alle",
+    "Ein Friedensvertrag, der gebrochen wurde"
+   ],
+   "richtig": 0,
+   "erklaerung": "Negativer Frieden heißt: Abwesenheit von direkter Gewalt. Positiver Frieden heißt zusätzlich: keine strukturelle Gewalt, also zum Beispiel keine Unterdrückung und Armut durch ungerechte Verhältnisse.",
+   "quelle": "Johan Galtung: Gewalt, Frieden und Friedensforschung (1969); Sowi-Lehrbuch Q2",
+   "zeit": 20
+  },
+  {
+   "station": 4,
+   "frage": "Seit wann gilt im Gaza-Krieg eine Waffenruhe?",
+   "antworten": [
+    "Seit dem 7. Oktober 2024",
+    "Seit dem 10. Oktober 2025",
+    "Seit dem 1. Januar 2025",
+    "Seit dem 1. März 2024"
+   ],
+   "richtig": 1,
+   "erklaerung": "Am 10. Oktober 2025 trat eine Waffenruhe auf Grundlage des Plans von US-Präsident Trump in Kraft. Geiseln und Gefangene wurden ausgetauscht. Die zweite Phase des Plans kommt nur langsam voran.",
+   "quelle": "tagesschau.de, Berichte vom 10.10.2025 zur Waffenruhe im Gazastreifen",
+   "zeit": 20
+  },
+  {
+   "station": 4,
+   "frage": "Wofür steht der 27. Oktober 2026 in Israel?",
+   "antworten": [
+    "Gründung eines palästinensischen Staates",
+    "Abzug aller Truppen aus dem Westjordanland",
+    "Wahl des israelischen Parlaments (Knesset)",
+    "Ende der Waffenruhe"
+   ],
+   "richtig": 2,
+   "erklaerung": "Am 27. Oktober 2026 wählt Israel ein neues Parlament, die Knesset. Das Ergebnis entscheidet mit darüber, welche Regierung über die nächsten Schritte im Konflikt verhandelt.",
+   "quelle": "Wahltermin: Knesset / Zentrale Wahlkommission Israels; Bericht z. B. tagesschau.de (vom LK zu ergänzen)",
+   "zeit": 20
+  },
+  {
+   "station": 4,
+   "frage": "Was bedeutet „Zweistaatenlösung“?",
+   "antworten": [
+    "Ein Staat Israel und ein Staat Palästina nebeneinander",
+    "Ein gemeinsamer Staat für alle mit zwei Hauptstädten",
+    "Zwei Staaten verwalten gemeinsam den Gazastreifen",
+    "Israel und Ägypten teilen sich das Westjordanland"
+   ],
+   "richtig": 0,
+   "erklaerung": "Die Zweistaatenlösung sieht einen unabhängigen palästinensischen Staat neben Israel vor. Viele Staaten und die UN unterstützen sie. Umstritten sind unter anderem Grenzen, Siedlungen, Jerusalem und Sicherheit.",
+   "quelle": "Bundeszentrale für politische Bildung (bpb.de), Dossier Israel – Lösungsansätze",
+   "zeit": 20
+  },
+  {
+   "station": 5,
+   "frage": "Was ist ein Faktencheck?",
+   "antworten": [
+    "Eine Umfrage, was die meisten Menschen glauben",
+    "Ein Video mit vielen Klicks",
+    "Die Prüfung, ob eine Behauptung mit belegbaren Quellen stimmt",
+    "Ein Kommentar mit der eigenen Meinung"
+   ],
+   "richtig": 2,
+   "erklaerung": "Bei einem Faktencheck wird eine Behauptung, ein Bild oder ein Video mit Quellen überprüft: Wer hat es veröffentlicht? Wann und wo ist es entstanden? Was sagen andere, verlässliche Quellen?",
+   "quelle": "Bundeszentrale für politische Bildung (bpb.de), Themenseite Desinformation / Faktencheck",
+   "zeit": 20
+  },
+  {
+   "station": 5,
+   "frage": "Was bedeutet „Agenda-Setting“?",
+   "antworten": [
+    "Politiker schreiben ihre Termine in einen Kalender",
+    "Eine Partei stellt ihr Wahlprogramm vor",
+    "Eine Zeitung druckt nur Sportnachrichten",
+    "Medien beeinflussen, welche Themen viele Menschen für wichtig halten"
+   ],
+   "richtig": 3,
+   "erklaerung": "Worüber Medien oft und groß berichten, halten viele Menschen für besonders wichtig. Darum ist es wichtig, welche Ereignisse in den Nachrichten vorkommen und welche fehlen.",
+   "quelle": "McCombs & Shaw (1972); bpb.de, Lexikon „Agenda-Setting“",
+   "zeit": 20
+  }
+ ]
+};

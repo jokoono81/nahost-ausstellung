@@ -1,0 +1,34 @@
+/* Welt F2 „Pinnwand“ – gemeinsame Basis aller Ausstellungsseiten.
+   Druckschrift: Atkinson Hyperlegible (Braille Institute, OFL) · Handschrift: Kalam (ITF, OFL) */
+@font-face{font-family:'Atkinson Hyperlegible';src:url(fonts/AtkinsonHyperlegible-Regular.ttf) format('truetype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Atkinson Hyperlegible';src:url(fonts/AtkinsonHyperlegible-Bold.ttf) format('truetype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Atkinson Hyperlegible';src:url(fonts/AtkinsonHyperlegible-Italic.ttf) format('truetype');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Atkinson Hyperlegible';src:url(fonts/AtkinsonHyperlegible-BoldItalic.ttf) format('truetype');font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:Kalam;src:url(fonts/Kalam-Regular.ttf) format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:Kalam;src:url(fonts/Kalam-Bold.ttf) format('truetype');font-weight:700;font-display:swap}
+
+:root{
+  --packpapier:#c4a173; --ink:#1d1d1b; --tinte:#2b4a8b; --signal:#c62828;
+  --k-weiss:#fbfaf6; --k-gelb:#ffe36e; --k-blau:#8ec5f0; --k-apricot:#ffb072; --k-rose:#e9a6d8;
+  --font-druck:'Atkinson Hyperlegible',system-ui,sans-serif; --font-hand:Kalam,'Comic Sans MS',cursive;
+  --schatten:0 3px 6px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+html{font-family:var(--font-druck);color:var(--ink)}
+::selection{background:var(--k-gelb);color:var(--ink)}
+:focus-visible{outline:3px solid var(--tinte);outline-offset:3px}
+.packpapier{background-color:var(--packpapier);
+  background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px),radial-gradient(rgba(0,0,0,.06) 1px,transparent 1px);
+  background-size:7px 7px,11px 11px;background-position:0 0,3px 5px}
+/* Metaplan-Karte: Form trägt Bedeutung (rechteck | oval | wolke | kreis), Farbe nie allein */
+.karte{position:relative;background:var(--k-weiss);box-shadow:var(--schatten);font-weight:700;padding:30px 18px 14px}
+.karte.oval{border-radius:50%/42%}
+.karte.wolke{border-radius:40px 60px 50px 70px/50px 40px 70px 50px}
+.karte.kreis{border-radius:50%}
+.karte.gelb{background:var(--k-gelb)}.karte.blau{background:var(--k-blau)}.karte.apricot{background:var(--k-apricot)}.karte.rose{background:var(--k-rose)}
+/* Pinnwandnadel: schräg, mit Stahlnadel und Schatten. .nadel-blau für Wechsel */
+.karte::before{content:'';position:absolute;top:-26px;left:50%;width:48px;height:52px;margin-left:-26px;
+  background:url(pin-rot.svg) no-repeat center/contain;z-index:3;pointer-events:none}
+.karte.nadel-blau::before{background-image:url(pin-blau.svg);transform:scaleX(-1)}
+.karte.ohne-nadel::before{display:none}
+.hand{font-family:var(--font-hand);font-weight:400;color:var(--tinte)}

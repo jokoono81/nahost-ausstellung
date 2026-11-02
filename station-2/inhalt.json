@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "station": 2,
+  "typ": "zeitstrahl",
+  "muster": true,
+  "titel": "Konfliktverlauf: Was geschah wann?",
+  "leitfrage": "Wie wurde aus dem Streit um Land ein Dauerkonflikt?",
+  "anleitung": "Lege die Ereignis-Karten in die richtige Reihenfolge: das früheste oben, das jüngste unten. Ziehen oder antippen und dann einen Platz antippen. Danach „Prüfen“.",
+  "ereignisse": [
+    {
+      "datum": "1947-11-29",
+      "anzeige": "29. November 1947",
+      "titel": "UN-Teilungsplan",
+      "beschreibung": "Die UN-Vollversammlung beschließt, das britische Mandatsgebiet Palästina in einen jüdischen und einen arabischen Staat zu teilen.",
+      "israelisch": "Die jüdische Seite stimmt zu: endlich eine rechtliche Grundlage für einen eigenen Staat.",
+      "palaestinensisch": "Die arabische Seite lehnt ab: Sie ist in der Mehrheit, soll aber weniger als die Hälfte des Landes bekommen.",
+      "quelle": "bpb: UN-Teilungsplan für Palästina 1947"
+    },
+    {
+      "datum": "1948-05-14",
+      "anzeige": "14. Mai 1948",
+      "titel": "Gründung des Staates Israel – Krieg 1948/49",
+      "beschreibung": "Israel erklärt seine Unabhängigkeit. Am nächsten Tag greifen fünf arabische Armeen an.",
+      "israelisch": "Unabhängigkeit: Nach dem Holocaust hat das jüdische Volk einen eigenen, sicheren Staat.",
+      "palaestinensisch": "Nakba („Katastrophe“): Rund 700.000 Palästinenserinnen und Palästinenser fliehen oder werden vertrieben.",
+      "quelle": "bpb: Geschichte des Nahostkonflikts"
+    },
+    {
+      "datum": "1967-06-05",
+      "anzeige": "Juni 1967",
+      "titel": "Sechstagekrieg",
+      "beschreibung": "In sechs Tagen erobert Israel unter anderem das Westjordanland, Ost-Jerusalem und den Gazastreifen.",
+      "israelisch": "Ein Verteidigungskrieg gegen einen drohenden Angriff – Jerusalem ist wieder vereint.",
+      "palaestinensisch": "Naksa („Rückschlag“): Beginn der Besatzung; wieder fliehen viele Menschen.",
+      "quelle": "bpb: Geschichte des Nahostkonflikts"
+    },
+    {
+      "datum": "1993-09-13",
+      "anzeige": "13. September 1993",
+      "titel": "Oslo-Abkommen",
+      "beschreibung": "Israel und die PLO erkennen sich gegenseitig an. Die Palästinensische Autonomiebehörde entsteht.",
+      "israelisch": "Hoffnung auf Frieden – später Enttäuschung durch Selbstmordanschläge.",
+      "palaestinensisch": "Hoffnung auf einen eigenen Staat – später Enttäuschung, weil die Siedlungen weiter wachsen.",
+      "quelle": "bpb: Osloer Abkommen"
+    },
+    {
+      "datum": "2005-09-12",
+      "anzeige": "September 2005",
+      "titel": "Israel zieht aus dem Gazastreifen ab",
+      "beschreibung": "Israel räumt alle Siedlungen in Gaza und zieht seine Soldaten ab.",
+      "israelisch": "Ein Schritt zum Frieden – danach werden trotzdem Raketen auf Israel abgefeuert.",
+      "palaestinensisch": "Israel kontrolliert weiter Grenzen, Luftraum und Küste – für viele bleibt Gaza besetzt.",
+      "quelle": "bpb: Geschichte des Nahostkonflikts"
+    },
+    {
+      "datum": "2007-06-15",
+      "anzeige": "Juni 2007",
+      "titel": "Hamas übernimmt Gaza – Blockade",
+      "beschreibung": "Die Hamas vertreibt die Fatah aus Gaza. Israel und Ägypten riegeln den Gazastreifen weitgehend ab.",
+      "israelisch": "Die Blockade soll verhindern, dass die Hamas Waffen ins Land schmuggelt.",
+      "palaestinensisch": "Die Blockade trifft alle Menschen in Gaza – viele sprechen von einem „Freiluftgefängnis“.",
+      "quelle": "bpb: Geschichte des Nahostkonflikts"
+    },
+    {
+      "datum": "2023-10-07",
+      "anzeige": "7. Oktober 2023",
+      "titel": "Terrorangriff der Hamas – Beginn des Gaza-Kriegs",
+      "beschreibung": "Hamas-Kämpfer töten in Israel rund 1.200 Menschen und verschleppen 251 Geiseln. Israel beginnt einen Krieg in Gaza.",
+      "israelisch": "Der schlimmste Tag für Jüdinnen und Juden seit dem Holocaust. Ziel: die Hamas zerschlagen, die Geiseln befreien.",
+      "palaestinensisch": "Die Hamas nennt den Angriff „Al-Aqsa-Flut“ und spricht von Widerstand. Viele verweisen auf Besatzung und Blockade als Vorgeschichte.",
+      "quelle": "tagesschau.de; bpb"
+    },
+    {
+      "datum": "2025-10-10",
+      "anzeige": "10. Oktober 2025",
+      "titel": "Waffenruhe nach dem 20-Punkte-Plan",
+      "beschreibung": "Nach über zwei Jahren Krieg mit Zehntausenden Toten in Gaza tritt eine Waffenruhe in Kraft. Grundlage ist der Plan von US-Präsident Trump.",
+      "israelisch": "Alle lebenden Geiseln kommen frei. Die Hamas soll nun ihre Waffen abgeben.",
+      "palaestinensisch": "Die Bombardierungen sollen enden – doch Israel kontrolliert inzwischen rund 60 Prozent von Gaza, und Angriffe gehen weiter.",
+      "quelle": "tagesschau.de, 10.10.2026"
+    }
+  ],
+  "widerspruch": {
+    "israelisch": "1948 ist der Unabhängigkeitstag. 1967 wurde Jerusalem wieder vereint.",
+    "palaestinensisch": "1948 ist die Nakba, 1967 die Naksa – der Beginn der Besatzung.",
+    "einordnung": "Dieselben Daten, zwei Namen. Wer nur einen Namen benutzt, übernimmt oft schon eine Sicht. Fachlich fair ist es, beide Bezeichnungen zu nennen."
+  },
+  "quellen": [
+    {"titel": "UN-Teilungsplan für Palästina 1947", "herausgeber": "Bundeszentrale für politische Bildung", "url": "https://www.bpb.de/kurz-knapp/taegliche-dosis-politik/543189/un-teilungsplan-fuer-palaestina-1947/", "datum": ""},
+    {"titel": "Geschichte des Nahostkonflikts", "herausgeber": "Bundeszentrale für politische Bildung", "url": "https://www.bpb.de/themen/naher-mittlerer-osten/israel/45042/geschichte-des-nahostkonflikts/", "datum": ""},
+    {"titel": "Osloer Abkommen als Meilensteine im Nahost-Friedensprozess", "herausgeber": "Bundeszentrale für politische Bildung", "url": "https://www.bpb.de/kurz-knapp/hintergrund-aktuell/275803/osloer-abkommen-als-meilensteine-im-nahost-friedensprozess/", "datum": ""},
+    {"titel": "Zeitleiste: Der Nahostkonflikt (PDF)", "herausgeber": "Bundeszentrale für politische Bildung", "url": "https://www.bpb.de/system/files/dokument_pdf/Zeitleiste_Der_Nahostkonflikt_DE_Banner_0.pdf", "datum": ""},
+    {"titel": "Ein Jahr brüchige Gaza-Waffenruhe", "herausgeber": "tagesschau.de", "url": "https://www.tagesschau.de/ausland/asien/israel-gaza-waffenruhe-112.html", "datum": "10.10.2026"},
+    {"titel": "Geiseln der Hamas – eine Übersicht", "herausgeber": "tagesschau.de", "url": "https://www.tagesschau.de/ausland/asien/geiseln-hamas-uebersicht-102.html", "datum": ""}
+  ],
+  "eigeneQuelle": {"titel": "", "url": "", "begruendung": ""}
+}
